@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="area_list">
+        <item>Angol</item>
+        <item>Auto Nagar</item>
+        <item>Bogarves</item>
+        <item>Camp</item>
+        <item>Chennamma Nagar</item>
+        <item>Fort Road</item>
+        <item>Hindalga</item>
+        <item>Honaga</item>
+        <item>Khangrali</item>
+        <item>Khanapur</item>
+        <item>Nehru Nagar</item>
+        <item>Shahapur</item>
+        <item>Tilakwadi</item>
+        <item>Vadagaon</item>
+    </string-array>
+</resources>

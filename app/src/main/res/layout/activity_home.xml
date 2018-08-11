@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/home_hero"
+            android:contentDescription="@string/hero_image" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="235dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentLeft="true"
+        tools:ignore="RtlHardcoded">
+
+        <!--android:layout_width="match_parent"
+            android:layout_height="@dimen/card_height"
+            android:layout_marginLeft="@dimen/uni_margin"
+            android:layout_marginRight="@dimen/uni_margin"
+            android:layout_marginBottom="@dimen/uni_margin"
+            android:layout_marginTop="@dimen/uni_margin"
+            android:padding="@dimen/uni_padding"
+            app:cardCornerRadius="@dimen/card_radius"
+            android:elevation="@dimen/card_elevation"
+        -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/c1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="0.5dp"
+            app:cardElevation="1dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/swastika"
+                        android:padding="@dimen/uni_padding"
+                        android:contentDescription="@string/home_img_1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_item1"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/uni_padding"
+                        android:textSize="16sp"
+                        android:textColor="@color/card_text"/>
+                </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <!--android:layout_width="match_parent"
+            android:layout_height="@dimen/card_height"
+            android:layout_marginLeft="@dimen/uni_margin"
+            android:layout_marginBottom="@dimen/uni_margin"
+            android:layout_marginRight="@dimen/uni_margin"
+            android:padding="@dimen/uni_padding"
+            app:cardCornerRadius="@dimen/card_radius"
+            android:elevation="@dimen/card_elevation"-->
+        <!-->-->
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/c2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="0.5dp"
+            app:cardElevation="1dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/pray"
+                    android:padding="@dimen/uni_padding"
+                    android:contentDescription="@string/home_img_2" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_item2"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/uni_padding"
+                    android:textSize="16sp"
+                    android:textColor="@color/card_text"/>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!--android:layout_width="match_parent"
+            android:layout_height="@dimen/card_height"
+            android:layout_marginLeft="@dimen/uni_margin"
+            android:layout_marginBottom="@dimen/uni_margin"
+            android:layout_marginRight="@dimen/uni_margin"
+            android:padding="@dimen/uni_padding"
+            app:cardCornerRadius="@dimen/card_radius"
+            android:elevation="@dimen/card_elevation"-->
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/c3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="0.5dp"
+            app:cardElevation="1dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/flags"
+                    android:padding="@dimen/uni_padding"
+                    android:contentDescription="@string/home_img_3" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_item3"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/uni_padding"
+                    android:textSize="16sp"
+                    android:textColor="@color/card_text"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_vertical"
+        android:padding="@dimen/uni_padding"
+        android:text="@string/footer"
+        android:textAlignment="center"
+        android:textColor="@color/bg_screen1"
+        android:textSize="14sp" />
+</RelativeLayout>
