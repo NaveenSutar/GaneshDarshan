@@ -30,6 +30,7 @@ public class GaneshaPreparationImagesActivityMain extends AppCompatActivity {
             String shby = getIntent().getStringExtra("cshared_by");
             String place = getIntent().getStringExtra("cplace_name");
             setInfo(img,shby,place);
+            //hey
         }
     }
 
