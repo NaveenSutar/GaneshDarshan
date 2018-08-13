@@ -25,21 +25,21 @@ public class HomeGaneshaAdapter extends RecyclerView.Adapter<HomeGaneshaAdapter.
     private List<GaneshaData> dataFiltered;
     private HomeGaneshaTwoAdapterListener listener;
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    class MyViewHolder extends RecyclerView.ViewHolder {
         private TextView cshared_by, cplace_name;
         private ImageView img_path;
 
-        public MyViewHolder(View view) {
+        MyViewHolder(View view) {
             super(view);
 
-            img_path = (ImageView) itemView.findViewById(R.id.hgimg);
-            cshared_by = (TextView) itemView.findViewById(R.id.hgsharedby);
-            cplace_name = (TextView) itemView.findViewById(R.id.hgplacename);
+            img_path = itemView.findViewById(R.id.hgimg);
+            cshared_by =  itemView.findViewById(R.id.hgsharedby);
+            cplace_name = itemView.findViewById(R.id.hgplacename);
 
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    // send selected contact in callback
+                    // send selected data in callback
                     listener.onDataSelected(dataFiltered.get(getAdapterPosition()));
                 }
             });
