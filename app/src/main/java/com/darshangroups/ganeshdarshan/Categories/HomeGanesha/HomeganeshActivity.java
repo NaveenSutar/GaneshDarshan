@@ -2,6 +2,7 @@ package com.darshangroups.ganeshdarshan.Categories.HomeGanesha;
 
 import android.app.SearchManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -19,7 +20,9 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.darshangroups.ganeshdarshan.Categories.HomeGanesha.Adapter.HomeGaneshaAdapter;
 import com.darshangroups.ganeshdarshan.Categories.HomeGanesha.Adapter.HomeGaneshaVollyInit;
+import com.darshangroups.ganeshdarshan.Categories.HomeGanesha.Details.HomeGaneshSwipeActivity;
 import com.darshangroups.ganeshdarshan.Data.GaneshaData;
+import com.darshangroups.ganeshdarshan.HomeActivity;
 import com.darshangroups.ganeshdarshan.R;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.gson.Gson;
@@ -41,7 +44,8 @@ public class HomeganeshActivity extends AppCompatActivity implements HomeGanesha
     private SwipeRefreshLayout swipeRefreshLayout;
 
     // url to fetch contacts json
-    private static final String URL = "http://192.168.1.13/ganappa/home.php";
+    private static final String URL = "http://192.168.1.13/ganappa/home.php?key=123";
+    private String mJsonResponse = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,15 +93,19 @@ public class HomeganeshActivity extends AppCompatActivity implements HomeGanesha
                 @Override
                 public void onResponse(JSONArray response) {
                     if (response == null) {
-                        Toast.makeText(getApplicationContext(), "Couldn't fetch the contacts! Pleas try again.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Couldn't fetch the data! Pleas try again.", Toast.LENGTH_LONG).show();
                         return;
                     }
+
+                    mJsonResponse = response.toString();
 
                     List<GaneshaData> items = new Gson().fromJson(response.toString(), new TypeToken<List<GaneshaData>>() {}.getType());
 
                     // adding contacts to contacts list
                     data.clear();
                     data.addAll(items);
+
+
 
                     // refreshing recycler view
                     mAdapter.notifyDataSetChanged();
@@ -176,7 +184,9 @@ public class HomeganeshActivity extends AppCompatActivity implements HomeGanesha
 
     @Override
     public void onDataSelected(GaneshaData data) {
-        Toast.makeText(getApplicationContext(), "Selected: " + data.getcshared_by() + ", " + data.getcplace_name(), Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(this, HomeGaneshSwipeActivity.class);
+        intent.putExtra("data",mJsonResponse);
+        startActivity(intent);
     }
 
     @Override

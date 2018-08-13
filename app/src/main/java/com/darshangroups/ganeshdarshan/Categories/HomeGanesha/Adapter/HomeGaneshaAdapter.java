@@ -1,6 +1,7 @@
 package com.darshangroups.ganeshdarshan.Categories.HomeGanesha.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.darshangroups.ganeshdarshan.Categories.PreparationGanesha.Details.GaneshaPreparationImagesActivityMain;
 import com.darshangroups.ganeshdarshan.Data.GaneshaData;
 import com.darshangroups.ganeshdarshan.R;
 
@@ -24,8 +26,8 @@ public class HomeGaneshaAdapter extends RecyclerView.Adapter<HomeGaneshaAdapter.
     private HomeGaneshaTwoAdapterListener listener;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView cshared_by, cplace_name;
-        public ImageView img_path;
+        private TextView cshared_by, cplace_name;
+        private ImageView img_path;
 
         public MyViewHolder(View view) {
             super(view);

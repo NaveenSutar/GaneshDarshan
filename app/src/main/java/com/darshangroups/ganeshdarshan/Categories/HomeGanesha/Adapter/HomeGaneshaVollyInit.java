@@ -9,8 +9,7 @@ import com.android.volley.toolbox.Volley;
 
 public class HomeGaneshaVollyInit extends Application {
 
-    public static final String TAG = HomeGaneshaVollyInit.class
-            .getSimpleName();
+    public static final String TAG = HomeGaneshaVollyInit.class.getSimpleName();
 
     private RequestQueue mRequestQueue;
 

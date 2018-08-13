@@ -93,7 +93,7 @@ public class PreparationActivity extends AppCompatActivity {
             try {
                 // Enter URL address where your json file resides
                 // Even you can make call to php file which returns json data
-                url = new URL("http://192.168.1.13/ganappa/prep.php");
+                url = new URL("http://192.168.1.13/ganappa/prep.php?key=123");
 
             } catch (MalformedURLException e) {
                 //TODO Auto-generated catch block
