@@ -93,8 +93,7 @@ public class HomeganeshActivity extends AppCompatActivity implements HomeGanesha
                         return;
                     }
 
-                    List<GaneshaData> items = new Gson().fromJson(response.toString(), new TypeToken<List<GaneshaData>>() {
-                    }.getType());
+                    List<GaneshaData> items = new Gson().fromJson(response.toString(), new TypeToken<List<GaneshaData>>() {}.getType());
 
                     // adding contacts to contacts list
                     data.clear();

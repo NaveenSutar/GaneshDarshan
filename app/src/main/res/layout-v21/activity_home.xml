@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
+        android:id="@+id/ll1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -30,6 +31,13 @@
         android:layout_alignParentLeft="true"
         tools:ignore="RtlHardcoded">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:textSize="10sp"
+            android:text="Choose below options to get started"/>
+
         <!--android:layout_width="match_parent"
             android:layout_height="@dimen/card_height"
             android:layout_marginLeft="@dimen/uni_margin"
@@ -44,7 +52,7 @@
             android:id="@+id/c1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="0.5dp"
+            app:cardCornerRadius="2dp"
             app:cardElevation="1dp"
             app:cardUseCompatPadding="true">
 
@@ -88,7 +96,7 @@
             android:id="@+id/c2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="0.5dp"
+            app:cardCornerRadius="2dp"
             app:cardElevation="1dp"
             app:cardUseCompatPadding="true">
 
@@ -130,7 +138,7 @@
             android:id="@+id/c3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="0.5dp"
+            app:cardCornerRadius="2dp"
             app:cardElevation="1dp"
             app:cardUseCompatPadding="true">
 
