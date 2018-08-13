@@ -86,14 +86,15 @@ public class HomeGaneshaAdapter extends RecyclerView.Adapter<HomeGaneshaAdapter.
                 } else {
                     List<GaneshaData> filteredList = new ArrayList<>();
                     for (GaneshaData row : data) {
-
                         // name match condition. this might differ depending on your requirement
                         // here we are looking for name or phone number match
-                        if (row.getcshared_by().toLowerCase().contains(charString.toLowerCase()) || row.getcplace_name().contains(charSequence)) {
+                        /*if (row.getcshared_by().toLowerCase().startsWith(charString.toLowerCase()) || row.getcplace_name().contains(charSequence)) {
+                            filteredList.add(row);
+                        }*/
+                        if (row.getcshared_by().toLowerCase().startsWith(charString.toLowerCase())) {
                             filteredList.add(row);
                         }
                     }
-
                     dataFiltered = filteredList;
                 }
 
