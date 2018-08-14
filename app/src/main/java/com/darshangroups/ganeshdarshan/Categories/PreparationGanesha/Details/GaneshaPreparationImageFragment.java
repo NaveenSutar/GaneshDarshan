@@ -29,16 +29,20 @@ public class GaneshaPreparationImageFragment extends AppCompatActivity {
             String img = getIntent().getStringExtra("cimg_path");
             String shby = getIntent().getStringExtra("cshared_by");
             String place = getIntent().getStringExtra("cplace_name");
-            setInfo(img,shby,place);
+            String title = getIntent().getStringExtra("ctitle");
+            setInfo(img,shby,place,title);
         }
     }
 
-    private void setInfo(String img, String shby, String place){
+    private void setInfo(String img, String shby, String place, String title){
         TextView share = (TextView)findViewById(R.id.sharedby);
         share.setText("Shared By : " + shby);
 
         TextView jaga = (TextView)findViewById(R.id.placename);
-        jaga.setText("Address : " + place);
+        jaga.setText("From : " + place);
+
+        TextView hesar = (TextView)findViewById(R.id.ctitle);
+        hesar.setText(title);
 
         image = (ImageView)findViewById(R.id.image);
 

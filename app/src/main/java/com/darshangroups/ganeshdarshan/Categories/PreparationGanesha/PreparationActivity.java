@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -180,7 +181,7 @@ public class PreparationActivity extends AppCompatActivity {
                 RV_PG_List = (RecyclerView) findViewById(R.id.ganesha_preparation_list);
                 mAdapter = new GaneshaPreparationAdapter(PreparationActivity.this, data);
                 RV_PG_List.setAdapter(mAdapter);
-                RV_PG_List.setLayoutManager(new LinearLayoutManager(PreparationActivity.this));
+                RV_PG_List.setLayoutManager(new GridLayoutManager(PreparationActivity.this, 2));
 
             } catch (JSONException e) {
                 Toast.makeText(PreparationActivity.this, e.toString(), Toast.LENGTH_LONG).show();

@@ -31,12 +31,12 @@
         android:layout_alignParentLeft="true"
         tools:ignore="RtlHardcoded">
 
-        <TextView
+        <!--<TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="3dp"
             android:textSize="10sp"
-            android:text="Choose below options to get started"/>
+            android:text="Choose below options to get started"/>-->
 
         <!--android:layout_width="match_parent"
             android:layout_height="@dimen/card_height"

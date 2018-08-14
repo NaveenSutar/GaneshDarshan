@@ -90,7 +90,7 @@ public class GaneshaPreparationAdapter extends RecyclerView.Adapter<RecyclerView
                     //i.putExtra("caddress", currentItem.getcaddress());
                     //i.putExtra("ccreated_by", currentItem.getccreated_by());
                     //i.putExtra("cimg_caption", currentItem.getcimg_caption());
-                    //i.putExtra("ctitle", currentItem.getctitle());
+                    i.putExtra("ctitle", currentItem.getctitle());
                     v.getContext().startActivity(i);
                 }
             });

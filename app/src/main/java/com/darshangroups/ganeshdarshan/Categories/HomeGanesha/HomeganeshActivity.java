@@ -76,18 +76,17 @@ public class HomeganeshActivity extends AppCompatActivity implements HomeGanesha
 
         swipeRefreshLayout.setOnRefreshListener(this);
 
-        fetchContacts();
+        fetchData();
     }
-
 
     @Override
     public void onRefresh() {
-        fetchContacts();
+        fetchData();
     }
     /**
      * fetches json by making http calls
      */
-    private void fetchContacts() {
+    private void fetchData() {
         JsonArrayRequest request = new JsonArrayRequest(URL, new Response.Listener<JSONArray>() {
                 @Override
                 public void onResponse(JSONArray response) {
