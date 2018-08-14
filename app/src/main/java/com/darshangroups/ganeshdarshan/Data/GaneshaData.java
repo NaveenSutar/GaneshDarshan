@@ -4,13 +4,13 @@ import java.io.Serializable;
 
 public class GaneshaData implements Serializable {
 
-    public String cimage_name, caddress, ccreated_by, cshared_by, cimg_caption, ctitle, cimg_path, cplace_name;
+    public String nimg_id, cimage_name, caddress, ccreated_by, cshared_by, cimg_caption, ctitle, cimg_path, cplace_name;
 
     public GaneshaData() {}
 
-    public GaneshaData(String cimage_name, String caddress, String ccreated_by, String cshared_by, String cimg_caption, String ctitle,
-                       String cimg_path, String cplace_name)
+    public GaneshaData(String nimg_id, String cimage_name, String caddress, String ccreated_by, String cshared_by, String cimg_caption, String ctitle, String cimg_path, String cplace_name)
     {
+        this.nimg_id = nimg_id;
         this.cimage_name = cimage_name;
         this.caddress = caddress;
         this.ccreated_by = ccreated_by;
@@ -19,6 +19,14 @@ public class GaneshaData implements Serializable {
         this.ctitle = ctitle;
         this.cimg_path = cimg_path;
         this.cplace_name = cplace_name;
+    }
+
+    public String getnimg_id() {
+        return nimg_id;
+    }
+
+    public void setnimg_id(String nimg_id) {
+        this.nimg_id = nimg_id;
     }
 
     public String getcimage_name() {

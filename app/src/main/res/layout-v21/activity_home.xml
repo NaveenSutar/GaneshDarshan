@@ -176,5 +176,5 @@
         android:text="@string/footer"
         android:textAlignment="center"
         android:textColor="@color/bg_screen1"
-        android:textSize="14sp" />
+        android:textSize="12sp" />
 </RelativeLayout>

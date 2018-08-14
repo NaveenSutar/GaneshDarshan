@@ -8,11 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.darshangroups.ganeshdarshan.Categories.PreparationGanesha.Details.GaneshaPreparationImagesActivity;
-import com.darshangroups.ganeshdarshan.Categories.PreparationGanesha.Details.GaneshaPreparationImagesActivityMain;
+import com.darshangroups.ganeshdarshan.Categories.PreparationGanesha.Details.GaneshaPreparationImageFragment;
 import com.darshangroups.ganeshdarshan.Data.GaneshaData;
 import com.darshangroups.ganeshdarshan.R;
 
@@ -84,7 +82,7 @@ public class GaneshaPreparationAdapter extends RecyclerView.Adapter<RecyclerView
                     //Toast.makeText(context, , Toast.LENGTH_LONG).show();
                     //Toast.makeText(context, "You have clicked on\t"+currentItem.getoffer_Name()+currentItem.getoffer_ends(), Toast.LENGTH_LONG).show();
 
-                    Intent i = new Intent(v.getContext(),GaneshaPreparationImagesActivityMain.class);
+                    Intent i = new Intent(v.getContext(),GaneshaPreparationImageFragment.class);
                     i.putExtra("cshared_by", currentItem.getcshared_by());
                     i.putExtra("cimg_path", currentItem.getcimg_path());
                     i.putExtra("cplace_name", currentItem.getcplace_name());

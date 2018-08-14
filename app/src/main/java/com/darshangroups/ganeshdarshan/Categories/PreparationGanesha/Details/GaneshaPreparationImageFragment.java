@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.darshangroups.ganeshdarshan.R;
 
-public class GaneshaPreparationImagesActivityMain extends AppCompatActivity {
+public class GaneshaPreparationImageFragment extends AppCompatActivity {
 
     private ScaleGestureDetector mScaleGestureDetector;
     private float mScaleFactor = 1.0f;
@@ -55,8 +55,7 @@ public class GaneshaPreparationImagesActivityMain extends AppCompatActivity {
         @Override
         public boolean onScale(ScaleGestureDetector scaleGestureDetector){
             mScaleFactor *= scaleGestureDetector.getScaleFactor();
-            mScaleFactor = Math.max(0.1f,
-                    Math.min(mScaleFactor, 10.0f));
+            mScaleFactor = Math.max(0.1f, Math.min(mScaleFactor, 10.0f));
             image.setScaleX(mScaleFactor);
             image.setScaleY(mScaleFactor);
             return true;

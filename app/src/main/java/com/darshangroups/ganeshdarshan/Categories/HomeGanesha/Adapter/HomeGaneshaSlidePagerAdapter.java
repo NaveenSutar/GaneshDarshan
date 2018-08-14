@@ -6,11 +6,11 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 import java.util.List;
 
-public class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
+public class HomeGaneshaSlidePagerAdapter extends FragmentStatePagerAdapter {
 
     private List<Fragment> fragmentList;
 
-    public ScreenSlidePagerAdapter(FragmentManager fm, List<Fragment> fragments) {
+    public HomeGaneshaSlidePagerAdapter(FragmentManager fm, List<Fragment> fragments) {
         super(fm);
         this.fragmentList = fragments;
     }

@@ -20,9 +20,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.darshangroups.ganeshdarshan.Categories.HomeGanesha.Adapter.HomeGaneshaAdapter;
 import com.darshangroups.ganeshdarshan.Categories.HomeGanesha.Adapter.HomeGaneshaVollyInit;
-import com.darshangroups.ganeshdarshan.Categories.HomeGanesha.Details.HomeGaneshSwipeActivity;
+import com.darshangroups.ganeshdarshan.Categories.HomeGanesha.Details.HomeGaneshaSwipeActivity;
 import com.darshangroups.ganeshdarshan.Data.GaneshaData;
-import com.darshangroups.ganeshdarshan.HomeActivity;
 import com.darshangroups.ganeshdarshan.R;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.gson.Gson;
@@ -98,6 +97,7 @@ public class HomeganeshActivity extends AppCompatActivity implements HomeGanesha
                     }
 
                     mJsonResponse = response.toString();
+                    int id = 0;
 
                     List<GaneshaData> items = new Gson().fromJson(response.toString(), new TypeToken<List<GaneshaData>>() {}.getType());
 
@@ -184,8 +184,9 @@ public class HomeganeshActivity extends AppCompatActivity implements HomeGanesha
 
     @Override
     public void onDataSelected(GaneshaData data) {
-        Intent intent = new Intent(this, HomeGaneshSwipeActivity.class);
+        Intent intent = new Intent(this, HomeGaneshaSwipeActivity.class);
         intent.putExtra("data",mJsonResponse);
+        intent.putExtra("nimg_id",data.getnimg_id());
         startActivity(intent);
     }
 

@@ -34,9 +34,9 @@
 
         <activity android:name=".Categories.SarvajanikGanesha.SarvaImagesActivity" android:label="Sarvajanik Images" tools:ignore="InnerclassSeparator" />
 
-        <activity android:name=".Categories.HomeGanesha.Details.HomeGaneshSwipeActivity" android:label="Home Ganesha Images" tools:ignore="InnerclassSeparator" />
+        <activity android:name=".Categories.HomeGanesha.Details.HomeGaneshaSwipeActivity" android:label="Home Ganesha Images" tools:ignore="InnerclassSeparator" />
 
-        <activity android:name=".Categories.PreparationGanesha.Details.GaneshaPreparationImagesActivityMain" android:label="Home Ganesha Images" tools:ignore="InnerclassSeparator" />
+        <activity android:name=".Categories.PreparationGanesha.Details.GaneshaPreparationImageFragment" android:label="Home Ganesha Images" tools:ignore="InnerclassSeparator" />
 
         <activity android:name=".Categories.HomeGanesha.HomeganeshActivity"
             android:label="@string/toolbar_title"

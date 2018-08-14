@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 
-import com.darshangroups.ganeshdarshan.Categories.HomeGanesha.Adapter.ScreenSlidePagerAdapter;
+import com.darshangroups.ganeshdarshan.Categories.HomeGanesha.Adapter.HomeGaneshaSlidePagerAdapter;
 import com.darshangroups.ganeshdarshan.Data.GaneshaData;
 import com.darshangroups.ganeshdarshan.R;
 import com.google.gson.Gson;
@@ -16,10 +16,12 @@ import com.google.gson.reflect.TypeToken;
 import java.util.List;
 import java.util.Vector;
 
-public class HomeGaneshSwipeActivity extends FragmentActivity {
+public class HomeGaneshaSwipeActivity extends FragmentActivity {
 
     private ViewPager mPager;
     private List<Fragment> fragmentList = new Vector<>();
+    private int position = 0;
+    private int id = 0;
 
 
     @Override
@@ -29,6 +31,7 @@ public class HomeGaneshSwipeActivity extends FragmentActivity {
 
         Intent intent = getIntent();
         String mJsonResponse = intent.getStringExtra("data");
+        id = Integer.parseInt(intent.getStringExtra("id"));
 
         loadFragmentData(mJsonResponse);
         setViewpager();
@@ -37,19 +40,25 @@ public class HomeGaneshSwipeActivity extends FragmentActivity {
     private void loadFragmentData(String mJsonResponse) {
         List<GaneshaData> items = new Gson().fromJson(mJsonResponse, new TypeToken<List<GaneshaData>>() {}.getType());
 
-        for (GaneshaData data : items) {
+        for (int i = 0; i < items.size(); i++) {
+            GaneshaData data = items.get(i);
+
             Bundle bundle = new Bundle();
             bundle.putString("cimg_path", data.getcimg_path());
 
-            HomeGaneshImageFragment imageFragment = new HomeGaneshImageFragment();
+            HomeGaneshaImageFragment imageFragment = new HomeGaneshaImageFragment();
             imageFragment.setArguments(bundle);
             fragmentList.add(imageFragment);
+
+            if (Integer.parseInt(data.getnimg_id()) == id) {
+                position = i;
+            }
         }
     }
 
     private void setViewpager() {
         mPager = findViewById(R.id.pager);
-        PagerAdapter mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager(),fragmentList);
+        PagerAdapter mPagerAdapter = new HomeGaneshaSlidePagerAdapter(getSupportFragmentManager(),fragmentList);
         mPager.setAdapter(mPagerAdapter);
     }
 
