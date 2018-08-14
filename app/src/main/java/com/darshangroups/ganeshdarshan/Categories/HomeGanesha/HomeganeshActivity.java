@@ -97,15 +97,11 @@ public class HomeganeshActivity extends AppCompatActivity implements HomeGanesha
                     }
 
                     mJsonResponse = response.toString();
-                    int id = 0;
-
                     List<GaneshaData> items = new Gson().fromJson(response.toString(), new TypeToken<List<GaneshaData>>() {}.getType());
 
                     // adding contacts to contacts list
                     data.clear();
                     data.addAll(items);
-
-
 
                     // refreshing recycler view
                     mAdapter.notifyDataSetChanged();

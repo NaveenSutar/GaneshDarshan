@@ -31,7 +31,7 @@ public class HomeGaneshaSwipeActivity extends FragmentActivity {
 
         Intent intent = getIntent();
         String mJsonResponse = intent.getStringExtra("data");
-        id = Integer.parseInt(intent.getStringExtra("id"));
+        id = Integer.parseInt(intent.getStringExtra("nimg_id"));
 
         loadFragmentData(mJsonResponse);
         setViewpager();
@@ -60,6 +60,7 @@ public class HomeGaneshaSwipeActivity extends FragmentActivity {
         mPager = findViewById(R.id.pager);
         PagerAdapter mPagerAdapter = new HomeGaneshaSlidePagerAdapter(getSupportFragmentManager(),fragmentList);
         mPager.setAdapter(mPagerAdapter);
+        mPager.setCurrentItem(position, true);
     }
 
 }
