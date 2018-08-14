@@ -25,7 +25,7 @@ public class GaneshaPreparationAdapter extends RecyclerView.Adapter<RecyclerView
     GaneshaData current;
     int currentPos=0;
 
-    // create constructor to innitilize context and data sent from shopOfferMainActivity
+    // create constructor to innitilize context and data sent from PreparationActivity
     public GaneshaPreparationAdapter(Context context, List<GaneshaData> data){
         this.context=context;
         inflater= LayoutInflater.from(context);
@@ -43,13 +43,13 @@ public class GaneshaPreparationAdapter extends RecyclerView.Adapter<RecyclerView
     // Bind data
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        // Get current position of item in recyclerview to bind data and assign values from list
+        //Get current position of item in recyclerview to bind data and assign values from list
         GaneshaPreparationAdapter.MyHolder myHolder= (GaneshaPreparationAdapter.MyHolder) holder;
         GaneshaData current=data.get(position);
         myHolder.cshared_by.setText(current.cshared_by);
         myHolder.cplace_name.setText(current.cplace_name);
         myHolder.cimg_caption.setText(current.cimg_caption);
-        // load image into imageview using glide
+        //load image into imageview using glide
         Glide.with(context).load(current.cimg_path).placeholder(R.drawable.pray).error(R.drawable.pray).into(myHolder.img_path);
     }
 
@@ -86,10 +86,10 @@ public class GaneshaPreparationAdapter extends RecyclerView.Adapter<RecyclerView
                     i.putExtra("cshared_by", currentItem.getcshared_by());
                     i.putExtra("cimg_path", currentItem.getcimg_path());
                     i.putExtra("cplace_name", currentItem.getcplace_name());
-                    //i.putExtra("cimage_name",currentItem.getcimage_name() );
-                    //i.putExtra("caddress", currentItem.getcaddress());
-                    //i.putExtra("ccreated_by", currentItem.getccreated_by());
-                    //i.putExtra("cimg_caption", currentItem.getcimg_caption());
+                    i.putExtra("cimage_name",currentItem.getcimage_name() );
+                    i.putExtra("caddress", currentItem.getcaddress());
+                    i.putExtra("ccreated_by", currentItem.getccreated_by());
+                    i.putExtra("cimg_caption", currentItem.getcimg_caption());
                     i.putExtra("ctitle", currentItem.getctitle());
                     v.getContext().startActivity(i);
                 }

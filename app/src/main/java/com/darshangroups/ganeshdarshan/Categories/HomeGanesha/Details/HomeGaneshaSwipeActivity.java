@@ -23,7 +23,6 @@ public class HomeGaneshaSwipeActivity extends FragmentActivity {
     private int position = 0;
     private int id = 0;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,11 +48,6 @@ public class HomeGaneshaSwipeActivity extends FragmentActivity {
             bundle.putString("cplace_name", data.getcplace_name());
             bundle.putString("ctitle", data.getctitle());
 
-            /*String cimg_path = bundle.getString("cimg_path", null);
-            String cshared_by = bundle.getString("cshared_by", null);
-            String cplace_name = bundle.getString("cplace_name", null);
-            String ctitle = bundle.getString("ctitle", null);
-*/
             HomeGaneshaImageFragment imageFragment = new HomeGaneshaImageFragment();
             imageFragment.setArguments(bundle);
             fragmentList.add(imageFragment);

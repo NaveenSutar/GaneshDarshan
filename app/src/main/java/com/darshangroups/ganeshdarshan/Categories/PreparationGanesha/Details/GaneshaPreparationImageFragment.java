@@ -1,9 +1,14 @@
 package com.darshangroups.ganeshdarshan.Categories.PreparationGanesha.Details;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,10 +17,8 @@ import com.darshangroups.ganeshdarshan.R;
 
 public class GaneshaPreparationImageFragment extends AppCompatActivity {
 
-    private ScaleGestureDetector mScaleGestureDetector;
-    private float mScaleFactor = 1.0f;
-
-    ImageView image;
+    ImageView ivCimg_path;
+    TextView tvCshared_by, tvCplace_name, tvCtitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,34 +38,16 @@ public class GaneshaPreparationImageFragment extends AppCompatActivity {
     }
 
     private void setInfo(String img, String shby, String place, String title){
-        TextView share = (TextView)findViewById(R.id.sharedby);
-        share.setText("Shared By : " + shby);
+        tvCshared_by = (TextView)findViewById(R.id.sharedby);
+        tvCplace_name = (TextView)findViewById(R.id.placename);
+        tvCtitle = (TextView)findViewById(R.id.ctitle);
+        ivCimg_path = (ImageView)findViewById(R.id.image);
 
-        TextView jaga = (TextView)findViewById(R.id.placename);
-        jaga.setText("From : " + place);
-
-        TextView hesar = (TextView)findViewById(R.id.ctitle);
-        hesar.setText(title);
-
-        image = (ImageView)findViewById(R.id.image);
-
-        Glide.with(this).load(img).placeholder(R.drawable.pray).error(R.drawable.pray).into(image);
-        mScaleGestureDetector = new ScaleGestureDetector(this, new ScaleListener());
-    }
-
-    public boolean onTouchEvent(MotionEvent motionEvent) {
-        mScaleGestureDetector.onTouchEvent(motionEvent);
-        return true;
-    }
-
-    private class ScaleListener extends ScaleGestureDetector.SimpleOnScaleGestureListener {
-        @Override
-        public boolean onScale(ScaleGestureDetector scaleGestureDetector){
-            mScaleFactor *= scaleGestureDetector.getScaleFactor();
-            mScaleFactor = Math.max(0.1f, Math.min(mScaleFactor, 10.0f));
-            image.setScaleX(mScaleFactor);
-            image.setScaleY(mScaleFactor);
-            return true;
-        }
+        tvCshared_by.setText("Shared By : " + shby);
+        tvCplace_name.setText("From : " + place);
+        tvCtitle.setText(title);
+        Glide.with(this).load(img).placeholder(R.drawable.pray).error(R.drawable.pray).into(ivCimg_path);
     }
 }
+
+/**/

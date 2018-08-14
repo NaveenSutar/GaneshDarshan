@@ -16,8 +16,7 @@ import com.darshangroups.ganeshdarshan.R;
 
 public class HomeGaneshaImageFragment extends Fragment {
     private ImageView imageView;
-    TextView tvCshared_by, tvCplacename, tvCtitle;
-
+    private TextView tvCshared_by, tvCplacename, tvCtitle;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
