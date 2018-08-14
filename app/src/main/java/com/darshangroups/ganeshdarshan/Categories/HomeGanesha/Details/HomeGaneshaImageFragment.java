@@ -41,7 +41,6 @@ public class HomeGaneshaImageFragment extends Fragment {
             tvCshared_by.setText("Shared By : " + cshared_by);
             tvCplacename.setText("From : " + cplace_name);
         }
-
         return rootView;
     }
 }
