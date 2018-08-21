@@ -20,6 +20,8 @@
             <include layout="@layout/activity_p_g_placeholder"/>
             <include layout="@layout/activity_p_g_placeholder"/>
             <include layout="@layout/activity_p_g_placeholder"/>
+            <include layout="@layout/activity_p_g_placeholder"/>
+            <include layout="@layout/activity_p_g_placeholder"/>
         </LinearLayout>
     </com.facebook.shimmer.ShimmerFrameLayout>
 
@@ -31,9 +33,9 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/ganesha_preparation_list"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="horizontal"
-            android:layout_height="wrap_content">
+            android:orientation="horizontal">
         </android.support.v7.widget.RecyclerView>
     </android.support.v4.widget.SwipeRefreshLayout>
 </android.support.constraint.ConstraintLayout>

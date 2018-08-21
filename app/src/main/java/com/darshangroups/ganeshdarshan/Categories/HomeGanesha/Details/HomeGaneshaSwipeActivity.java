@@ -26,7 +26,7 @@ public class HomeGaneshaSwipeActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_h_g_images);
+        setContentView(R.layout.activity_image_view);
 
         Intent intent = getIntent();
         String mJsonResponse = intent.getStringExtra("data");

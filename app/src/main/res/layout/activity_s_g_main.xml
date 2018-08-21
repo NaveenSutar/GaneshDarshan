@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    app:ignore="NamespaceTypo"
+    android:theme="@style/AppThemeBar">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="5dp">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_view_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                shimmer:duration="800">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/activity_s_g_placeholder"/>
+                    <include layout="@layout/activity_s_g_placeholder"/>
+                    <include layout="@layout/activity_s_g_placeholder"/>
+                    <include layout="@layout/activity_s_g_placeholder"/>
+                    <include layout="@layout/activity_s_g_placeholder"/>
+                    <include layout="@layout/activity_s_g_placeholder"/>
+                    <include layout="@layout/activity_s_g_placeholder"/>
+                    <include layout="@layout/activity_s_g_placeholder"/>
+                    <include layout="@layout/activity_s_g_placeholder"/>
+                    <include layout="@layout/activity_s_g_placeholder"/>
+                    <include layout="@layout/activity_s_g_placeholder"/>
+                    <include layout="@layout/activity_s_g_placeholder"/>
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/c1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="1dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Angol"
+                        android:textSize="15sp"
+                        android:textColor="#333333"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingLeft="3dp"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/angol_rcview"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginBottom="3dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:paddingTop="3dp"/>
+                </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/c2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="1dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Auto Nagar"
+                        android:textSize="15sp"
+                        android:textColor="#333333"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingLeft="3dp"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/autonagar_rcview"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingTop="3dp"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/c3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="1dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bogarves"
+                        android:textSize="15sp"
+                        android:textColor="#333333"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingLeft="3dp"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/bogarves_rcview"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingTop="3dp"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/c4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="1dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Camp"
+                        android:textSize="15sp"
+                        android:textColor="#333333"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingLeft="3dp"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/camp_rcview"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingTop="3dp"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/c5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="1dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chennamma"
+                        android:textSize="15sp"
+                        android:textColor="#333333"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingLeft="3dp"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/chennamma_rcview"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingTop="3dp"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/c6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="1dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fort Road"
+                        android:textSize="15sp"
+                        android:textColor="#333333"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingLeft="3dp"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/fortroad_rcview"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingTop="3dp"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/c7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="1dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hindalga"
+                        android:textSize="15sp"
+                        android:textColor="#333333"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingLeft="3dp"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/hindalga_rcview"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingTop="3dp"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/c8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="1dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Honaga"
+                        android:textSize="15sp"
+                        android:textColor="#333333"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingLeft="3dp"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/honaga_rcview"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingTop="3dp"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/c9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="1dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kangrali"
+                        android:textSize="15sp"
+                        android:textColor="#333333"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingLeft="3dp"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/kangrali_rcview"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingTop="3dp"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/c10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="1dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Khanapur"
+                        android:textSize="15sp"
+                        android:textColor="#333333"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingLeft="3dp"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/khanapur_rcview"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingTop="3dp"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/c11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="1dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nehru Nagar"
+                        android:textSize="15sp"
+                        android:textColor="#333333"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingLeft="3dp"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/nehrunagar_rcview"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingTop="3dp"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/c12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="1dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shahpur"
+                        android:textSize="15sp"
+                        android:textColor="#333333"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingLeft="3dp"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/shahpur_rcview"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingTop="3dp"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/c13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="1dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tilakwadi"
+                        android:textSize="15sp"
+                        android:textColor="#333333"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingLeft="3dp"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/tilakwadi_rcview"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingTop="3dp"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/c14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="2dp"
+                android:layout_marginBottom="5dp"
+                app:cardElevation="1dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vadagaon"
+                        android:textSize="15sp"
+                        android:textColor="#333333"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingLeft="3dp"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/vadagaon_rcview"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingTop="3dp"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

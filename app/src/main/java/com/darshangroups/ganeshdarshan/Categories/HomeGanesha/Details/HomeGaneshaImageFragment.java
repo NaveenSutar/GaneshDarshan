@@ -4,8 +4,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
-import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -20,7 +18,7 @@ public class HomeGaneshaImageFragment extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup rootView = (ViewGroup) inflater .inflate(R.layout.activity_see_image, container, false);
+        ViewGroup rootView = (ViewGroup) inflater .inflate(R.layout.activity_image_container, container, false);
 
         imageView = rootView.findViewById(R.id.image);
         tvCshared_by = rootView.findViewById(R.id.sharedby);

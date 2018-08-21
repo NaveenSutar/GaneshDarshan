@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Response;
@@ -41,6 +42,7 @@ public class HomeganeshActivity extends AppCompatActivity implements HomeGanesha
 
     private ShimmerFrameLayout mShimmerViewContainer;
     private SwipeRefreshLayout swipeRefreshLayout;
+    //private TextView swipeinfo;
 
     // url to fetch contacts json
     private static final String URL = "http://192.168.1.13/ganappa/home.php?key=123";
@@ -53,6 +55,7 @@ public class HomeganeshActivity extends AppCompatActivity implements HomeGanesha
         //Toolbar toolbar = findViewById(R.id.toolbar);
         mShimmerViewContainer = findViewById(R.id.shimmer_view_container);
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swifeRefresh);
+        //swipeinfo = (TextView) findViewById(R.id.swipeinfo);
         //setSupportActionBar(toolbar);
 
         // toolbar fancy stuff
@@ -82,6 +85,7 @@ public class HomeganeshActivity extends AppCompatActivity implements HomeGanesha
     @Override
     public void onRefresh() {
         fetchData();
+        //swipeinfo.setVisibility(View.GONE);
     }
     /**
      * fetches json by making http calls
@@ -107,6 +111,7 @@ public class HomeganeshActivity extends AppCompatActivity implements HomeGanesha
 
                     mShimmerViewContainer.stopShimmerAnimation();
                     mShimmerViewContainer.setVisibility(View.GONE);
+                    //swipeinfo.setVisibility(View.VISIBLE);
                     swipeRefreshLayout.setRefreshing(false);
                 }
             }, new Response.ErrorListener() {
@@ -188,6 +193,7 @@ public class HomeganeshActivity extends AppCompatActivity implements HomeGanesha
     @Override
     public void onResume() {
         super.onResume();
+        //swipeinfo.setVisibility(View.INVISIBLE);
         mShimmerViewContainer.startShimmerAnimation();
     }
 

@@ -12,7 +12,7 @@ public class SarvaImagesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sarva_images);
+        setContentView(R.layout.activity_s_g_images);
 
         TextView txtProduct = (TextView) findViewById(R.id.area_label);
 
