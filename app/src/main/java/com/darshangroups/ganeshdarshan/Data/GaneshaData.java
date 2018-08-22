@@ -6,10 +6,10 @@ public class GaneshaData implements Serializable {
 
     public String nimg_id, cimage_name, caddress, ccreated_by, cshared_by, cimg_caption, ctitle, cimg_path, cplace_name;
 
-    public GaneshaData() {}
+    public GaneshaData() {
+    }
 
-    public GaneshaData(String nimg_id, String cimage_name, String caddress, String ccreated_by, String cshared_by, String cimg_caption, String ctitle, String cimg_path, String cplace_name)
-    {
+    public GaneshaData(String nimg_id, String cimage_name, String caddress, String ccreated_by, String cshared_by, String cimg_caption, String ctitle, String cimg_path, String cplace_name) {
         this.nimg_id = nimg_id;
         this.cimage_name = cimage_name;
         this.caddress = caddress;

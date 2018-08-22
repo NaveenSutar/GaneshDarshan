@@ -31,7 +31,7 @@ public class HomeGaneshaAdapter extends RecyclerView.Adapter<HomeGaneshaAdapter.
             super(view);
 
             img_path = itemView.findViewById(R.id.hgimg);
-            cshared_by =  itemView.findViewById(R.id.hgsharedby);
+            cshared_by = itemView.findViewById(R.id.hgsharedby);
             cplace_name = itemView.findViewById(R.id.hgplacename);
 
             view.setOnClickListener(new View.OnClickListener() {

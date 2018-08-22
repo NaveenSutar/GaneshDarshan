@@ -1,4 +1,4 @@
-package com.darshangroups.ganeshdarshan.Categories.PreparationGanesha.Adapter;
+package com.darshangroups.ganeshdarshan.Categories.SarvajanikGanesha.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,14 +10,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.darshangroups.ganeshdarshan.Categories.PreparationGanesha.Details.GaneshaPreparationImageFragment;
+import com.darshangroups.ganeshdarshan.Categories.SarvajanikGanesha.Details.*;
 import com.darshangroups.ganeshdarshan.Data.GaneshaData;
 import com.darshangroups.ganeshdarshan.R;
 
 import java.util.Collections;
 import java.util.List;
 
-public class GaneshaPreparationAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class SarvajanikGaneshaAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private Context context;
     private LayoutInflater inflater;
@@ -25,8 +25,8 @@ public class GaneshaPreparationAdapter extends RecyclerView.Adapter<RecyclerView
     GaneshaData current;
     int currentPos = 0;
 
-    // create constructor to innitilize context and data sent from PreparationActivity
-    public GaneshaPreparationAdapter(Context context, List<GaneshaData> data) {
+    // create constructor to innitilize context and data sent from shopOfferMainActivity
+    public SarvajanikGaneshaAdapter(Context context, List<GaneshaData> data) {
         this.context = context;
         inflater = LayoutInflater.from(context);
         this.data = data;
@@ -35,22 +35,20 @@ public class GaneshaPreparationAdapter extends RecyclerView.Adapter<RecyclerView
     // Inflate the layout when viewholder created
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.activity_p_g_container, parent, false);
-        GaneshaPreparationAdapter.MyHolder holder = new GaneshaPreparationAdapter.MyHolder(view);
+        View view = inflater.inflate(R.layout.activity_s_g_container, parent, false);
+        SarvajanikGaneshaAdapter.MyHolder holder = new SarvajanikGaneshaAdapter.MyHolder(view);
         return holder;
     }
 
     // Bind data
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        //Get current position of item in recyclerview to bind data and assign values from list
-        GaneshaPreparationAdapter.MyHolder myHolder = (GaneshaPreparationAdapter.MyHolder) holder;
+        // Get current position of item in recyclerview to bind data and assign values from list
+        SarvajanikGaneshaAdapter.MyHolder myHolder = (SarvajanikGaneshaAdapter.MyHolder) holder;
         GaneshaData current = data.get(position);
-        myHolder.cshared_by.setText(current.cshared_by);
-        myHolder.cplace_name.setText(current.cplace_name);
-        myHolder.cimg_caption.setText(current.cimg_caption);
-        //load image into imageview using glide
-        Glide.with(context).load(current.cimg_path).placeholder(R.drawable.pray).error(R.drawable.pray).into(myHolder.img_path);
+        myHolder.csharedby.setText(current.cshared_by);
+        // load image into imageview using glide
+        Glide.with(context).load(current.cimg_path).placeholder(R.drawable.pray).error(R.drawable.pray).into(myHolder.cimg_path);
     }
 
     // return total item from List
@@ -62,25 +60,21 @@ public class GaneshaPreparationAdapter extends RecyclerView.Adapter<RecyclerView
 
     public class MyHolder extends RecyclerView.ViewHolder {
 
-        TextView cshared_by, cplace_name, cimg_caption;
-        ImageView img_path;
+        TextView csharedby;
+        ImageView cimg_path;
 
-        //create constructor to get widget reference
+        // create constructor to get widget reference
         public MyHolder(View itemView) {
             super(itemView);
-            img_path = (ImageView) itemView.findViewById(R.id.pgimg);
-            cshared_by = (TextView) itemView.findViewById(R.id.pgsharedby);
-            cplace_name = (TextView) itemView.findViewById(R.id.pgplacename);
-            cimg_caption = (TextView) itemView.findViewById(R.id.pgcaption);
+            csharedby = (TextView) itemView.findViewById(R.id.cshared_by);
+            cimg_path = (ImageView) itemView.findViewById(R.id.cimg_path);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     GaneshaData currentItem = data.get(getAdapterPosition());
 
-                    //Toast.makeText(context, "Clicked on\t"+currentItem.getcshared_by()+" Place name is="+currentItem.getcplace_name(), Toast.LENGTH_LONG).show();
-
-                    Intent i = new Intent(v.getContext(), GaneshaPreparationImageFragment.class);
+                    Intent i = new Intent(v.getContext(), SarvajanikGaneshaImageFragment.class);
                     i.putExtra("nimg_id", currentItem.getnimg_id());
                     i.putExtra("cshared_by", currentItem.getcshared_by());
                     i.putExtra("cimg_path", currentItem.getcimg_path());

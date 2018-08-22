@@ -36,12 +36,12 @@ public class PreparationActivity extends AppCompatActivity {
     // CONNECTION_TIMEOUT and READ_TIMEOUT are in milliseconds
     public static final int CONNECTION_TIMEOUT = 10000;
     public static final int READ_TIMEOUT = 15000;
+
     private RecyclerView RV_PG_List;
     private GaneshaPreparationAdapter mAdapter;
 
     private ShimmerFrameLayout mShimmerViewContainer;
-
-    SwipeRefreshLayout mSwipeRefreshLayout;
+    private SwipeRefreshLayout mSwipeRefreshLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +49,7 @@ public class PreparationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_p_g_main);
 
         mShimmerViewContainer = findViewById(R.id.shimmer_view_container);
-        mSwipeRefreshLayout = (SwipeRefreshLayout)findViewById(R.id.swifeRefresh);
+        mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swifeRefresh);
 
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -167,6 +167,7 @@ public class PreparationActivity extends AppCompatActivity {
                 for (int i = 0; i < jArray.length(); i++) {
                     JSONObject json_data = jArray.getJSONObject(i);
                     GaneshaData GPData = new GaneshaData();
+                    GPData.nimg_id = json_data.getString("nimg_id");
                     GPData.cimage_name = json_data.getString("cimage_name");
                     GPData.caddress = json_data.getString("caddress");
                     GPData.ccreated_by = json_data.getString("ccreated_by");

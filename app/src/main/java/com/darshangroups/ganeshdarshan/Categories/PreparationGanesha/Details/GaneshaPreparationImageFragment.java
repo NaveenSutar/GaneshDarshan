@@ -20,21 +20,21 @@ public class GaneshaPreparationImageFragment extends AppCompatActivity {
         getInfo();
     }
 
-    private void getInfo(){
-        if(getIntent().hasExtra("cimg_path")&& getIntent().hasExtra("cshared_by")&& getIntent().hasExtra("cplace_name")){
+    private void getInfo() {
+        if (getIntent().hasExtra("cimg_path") && getIntent().hasExtra("cshared_by") && getIntent().hasExtra("cplace_name")) {
             String img = getIntent().getStringExtra("cimg_path");
             String shby = getIntent().getStringExtra("cshared_by");
             String place = getIntent().getStringExtra("cplace_name");
             String title = getIntent().getStringExtra("ctitle");
-            setInfo(img,shby,place,title);
+            setInfo(img, shby, place, title);
         }
     }
 
-    private void setInfo(String img, String shby, String place, String title){
-        tvCshared_by = (TextView)findViewById(R.id.sharedby);
-        tvCplace_name = (TextView)findViewById(R.id.placename);
-        tvCtitle = (TextView)findViewById(R.id.ctitle);
-        ivCimg_path = (ImageView)findViewById(R.id.image);
+    private void setInfo(String img, String shby, String place, String title) {
+        tvCshared_by = (TextView) findViewById(R.id.sharedby);
+        tvCplace_name = (TextView) findViewById(R.id.placename);
+        tvCtitle = (TextView) findViewById(R.id.ctitle);
+        ivCimg_path = (ImageView) findViewById(R.id.image);
 
         tvCshared_by.setText("Shared By : " + shby);
         tvCplace_name.setText("From : " + place);
@@ -42,5 +42,3 @@ public class GaneshaPreparationImageFragment extends AppCompatActivity {
         Glide.with(this).load(img).placeholder(R.drawable.pray).error(R.drawable.pray).into(ivCimg_path);
     }
 }
-
-/**/

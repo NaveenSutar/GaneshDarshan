@@ -19,14 +19,14 @@
         android:id="@+id/ll1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="3dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="3dp">
 
         <View
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background="@color/placeholder_bg"
-            android:layout_margin="5dp" />
+            android:layout_margin="5dp"
+            android:background="@color/placeholder_bg" />
 
         <!--<ImageView
             android:id="@+id/hgimg"
@@ -65,8 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="0.2dp"
         android:layout_below="@id/ll1"
-        android:background="@color/placeholder_bg"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
-    </View>
+        android:layout_marginRight="10dp"
+        android:background="@color/placeholder_bg"/>
 </RelativeLayout>

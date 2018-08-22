@@ -17,12 +17,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:textSize="16sp"
-            android:text="Title"
-            android:padding="10dp"
-            android:textAlignment="center"
             android:fontFamily="sans-serif-medium"
+            android:padding="10dp"
+            android:text="Title"
+            android:textAlignment="center"
             android:textColor="#ffffff"
+            android:textSize="16sp"
             tools:ignore="HardcodedText,RtlHardcoded" />
     </LinearLayout>
 
@@ -31,32 +31,32 @@
         android:id="@+id/image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:scaleType="fitCenter"
-        android:src="@drawable/home_hero"
-        android:layout_alignParentLeft="true" />
+        android:src="@drawable/home_hero" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:background="#65000000"
-        android:orientation="vertical"
-        android:padding="5dp"
         android:gravity="center_vertical"
-        android:layout_alignParentLeft="true">
+        android:orientation="vertical"
+        android:padding="5dp">
 
         <TextView
             android:id="@+id/sharedby"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:textSize="15sp"
-            android:text="Shared By"
             android:fontFamily="sans-serif-medium"
+            android:text="Shared By"
             android:textColor="#ffffff"
+            android:textSize="15sp"
             tools:ignore="HardcodedText,RtlHardcoded" />
 
         <TextView
@@ -66,8 +66,8 @@
             android:layout_gravity="center_vertical"
             android:layout_marginTop="-2dp"
             android:text="Place Name"
-            android:textSize="12sp"
             android:textColor="#FFFFFF"
+            android:textSize="12sp"
             tools:ignore="HardcodedText,RtlHardcoded" />
     </LinearLayout>
 

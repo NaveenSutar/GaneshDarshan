@@ -15,23 +15,29 @@ import com.darshangroups.ganeshdarshan.R;
 
 public class SplashActivity extends Activity {
     private PrefManager prefManager;
+
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
         Window window = getWindow();
         window.setFormat(PixelFormat.RGBA_8888);
     }
-    /** Called when the activity is first created. */
+
+    /**
+     * Called when the activity is first created.
+     */
     Thread splashTread;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         StartAnimations();
     }
+
     private void StartAnimations() {
         Animation anim = AnimationUtils.loadAnimation(this, R.anim.alpha);
         anim.reset();
-        LinearLayout l=(LinearLayout) findViewById(R.id.lin_lay);
+        LinearLayout l = (LinearLayout) findViewById(R.id.lin_lay);
         l.clearAnimation();
         l.startAnimation(anim);
 
@@ -54,7 +60,7 @@ public class SplashActivity extends Activity {
                         waited += 100;
                     }
                     prefManager = new PrefManager(SplashActivity.this);
-                   if (prefManager.isFirstTimeLaunch()) {
+                    if (prefManager.isFirstTimeLaunch()) {
                         intent = new Intent(SplashActivity.this, IntroActivity.class);
                     } else {
                         intent = new Intent(SplashActivity.this, HomeActivity.class);

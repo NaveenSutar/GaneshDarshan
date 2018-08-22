@@ -6,9 +6,9 @@ import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
 
-import com.darshangroups.ganeshdarshan.Categories.HomeGanesha.HomeganeshActivity;
+import com.darshangroups.ganeshdarshan.Categories.HomeGanesha.HomeGaneshaActivity;
 import com.darshangroups.ganeshdarshan.Categories.PreparationGanesha.PreparationActivity;
-import com.darshangroups.ganeshdarshan.Categories.SarvajanikGanesha.SarvajanikActivity;
+import com.darshangroups.ganeshdarshan.Categories.SarvajanikGanesha.SarvajanikGaneshaActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -26,7 +26,7 @@ public class HomeActivity extends AppCompatActivity {
         c1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent Sarvajanik = new Intent(HomeActivity.this, SarvajanikActivity.class);
+                Intent Sarvajanik = new Intent(HomeActivity.this, SarvajanikGaneshaActivity.class);
                 startActivity(Sarvajanik);
             }
         });
@@ -34,7 +34,7 @@ public class HomeActivity extends AppCompatActivity {
         c2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent Home = new Intent(HomeActivity.this, HomeganeshActivity.class);
+                Intent Home = new Intent(HomeActivity.this, HomeGaneshaActivity.class);
                 startActivity(Home);
             }
         });
