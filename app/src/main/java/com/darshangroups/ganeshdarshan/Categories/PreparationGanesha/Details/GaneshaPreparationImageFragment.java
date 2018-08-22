@@ -1,7 +1,12 @@
 package com.darshangroups.ganeshdarshan.Categories.PreparationGanesha.Details;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -41,4 +46,30 @@ public class GaneshaPreparationImageFragment extends AppCompatActivity {
         tvCtitle.setText(title);
         Glide.with(this).load(img).placeholder(R.drawable.pray).error(R.drawable.pray).into(ivCimg_path);
     }
+
+    /*@Override
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.activity_image_container, container, false);
+
+        ivCimg_path = rootView.findViewById(R.id.image);
+        tvCshared_by = rootView.findViewById(R.id.sharedby);
+        tvCplace_name = rootView.findViewById(R.id.placename);
+        tvCtitle = rootView.findViewById(R.id.ctitle);
+
+        Bundle bundle = this.getArguments();
+        if (bundle != null) {
+            String cimg_path = bundle.getString("cimg_path", null);
+            String cshared_by = bundle.getString("cshared_by", null);
+            String cplace_name = bundle.getString("cplace_name", null);
+            String ctitle = bundle.getString("ctitle", null);
+
+
+            Glide.with(getActivity()).load(cimg_path).placeholder(R.drawable.pray).error(R.drawable.pray).into(ivCimg_path);
+            tvCtitle.setText(ctitle);
+            tvCshared_by.setText("Shared By : " + cshared_by);
+            tvCplace_name.setText("From : " + cplace_name);
+        }
+        return rootView;
+    }*/
 }
+

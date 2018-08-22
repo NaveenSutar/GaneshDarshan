@@ -49,7 +49,7 @@ public class PreparationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_p_g_main);
 
         mShimmerViewContainer = findViewById(R.id.shimmer_view_container);
-        mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swifeRefresh);
+        mSwipeRefreshLayout = findViewById(R.id.swifeRefresh);
 
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -76,8 +76,7 @@ public class PreparationActivity extends AppCompatActivity {
         super.onPause();
     }
 
-    public class
-    AsyncFetch extends AsyncTask<String, String, String> {
+    public class AsyncFetch extends AsyncTask<String, String, String> {
 
         ProgressDialog pdLoading = new ProgressDialog(PreparationActivity.this);
         HttpURLConnection conn;
@@ -180,7 +179,7 @@ public class PreparationActivity extends AppCompatActivity {
                 }
 
                 //Setup and Handover data to recyclerview
-                RV_PG_List = (RecyclerView) findViewById(R.id.ganesha_preparation_list);
+                RV_PG_List = findViewById(R.id.ganesha_preparation_list);
                 mAdapter = new GaneshaPreparationAdapter(PreparationActivity.this, data);
                 RV_PG_List.setAdapter(mAdapter);
                 RV_PG_List.setLayoutManager(new GridLayoutManager(PreparationActivity.this, 2));
