@@ -13,6 +13,7 @@ import com.bumptech.glide.Glide;
 import com.darshangroups.ganeshdarshan.Categories.SarvajanikGanesha.Details.*;
 import com.darshangroups.ganeshdarshan.Data.GaneshaData;
 import com.darshangroups.ganeshdarshan.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.Collections;
 import java.util.List;
@@ -48,7 +49,7 @@ public class SarvajanikGaneshaAdapter extends RecyclerView.Adapter<RecyclerView.
         GaneshaData current = data.get(position);
         myHolder.csharedby.setText(current.cshared_by);
         // load image into imageview using glide
-        Glide.with(context).load(current.cimg_path).placeholder(R.drawable.pray).error(R.drawable.pray).into(myHolder.cimg_path);
+        Picasso.with(context).load(current.cimg_path).placeholder(R.drawable.img_err_two).error(R.drawable.img_err_two).into(myHolder.cimg_path);
     }
 
     // return total item from List

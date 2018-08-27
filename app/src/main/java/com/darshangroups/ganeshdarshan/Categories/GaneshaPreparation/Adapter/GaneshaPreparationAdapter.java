@@ -1,4 +1,4 @@
-package com.darshangroups.ganeshdarshan.Categories.HomeGanesha.Adapter;
+package com.darshangroups.ganeshdarshan.Categories.GaneshaPreparation.Adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.darshangroups.ganeshdarshan.Categories.GaneshaPreparation.GaneshaPreparationActivity;
 import com.darshangroups.ganeshdarshan.Data.GaneshaData;
 import com.darshangroups.ganeshdarshan.R;
 import com.squareup.picasso.Picasso;
@@ -18,22 +19,23 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeGaneshaAdapter extends RecyclerView.Adapter<HomeGaneshaAdapter.MyViewHolder> implements Filterable {
+public class GaneshaPreparationAdapter extends RecyclerView.Adapter<GaneshaPreparationAdapter.MyViewHolder> implements Filterable {
     private Context context;
     private List<GaneshaData> data;
     private List<GaneshaData> dataFiltered;
-    private HomeGaneshaTwoAdapterListener listener;
+    private GaneshaPreparationAdapterListener listener;
 
     class MyViewHolder extends RecyclerView.ViewHolder {
-        private TextView cshared_by, cplace_name;
-        private ImageView img_path;
+        private TextView cshared_by, cplace_name, cimg_caption;
+        private ImageView cimg_path;
 
         MyViewHolder(View view) {
             super(view);
 
-            img_path = itemView.findViewById(R.id.hgimg);
-            cshared_by = itemView.findViewById(R.id.hgsharedby);
-            cplace_name = itemView.findViewById(R.id.hgplacename);
+            cimg_path = (ImageView)itemView.findViewById(R.id.pgimg);
+            cshared_by = itemView.findViewById(R.id.pgsharedby);
+            cplace_name = itemView.findViewById(R.id.pgplacename);
+            cimg_caption = itemView.findViewById(R.id.pgcaption);
 
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -46,7 +48,7 @@ public class HomeGaneshaAdapter extends RecyclerView.Adapter<HomeGaneshaAdapter.
     }
 
 
-    public HomeGaneshaAdapter(Context context, List<GaneshaData> contactList, HomeGaneshaTwoAdapterListener listener) {
+    public GaneshaPreparationAdapter(Context context, List<GaneshaData> contactList, GaneshaPreparationActivity listener) {
         this.context = context;
         this.listener = listener;
         this.data = contactList;
@@ -55,7 +57,7 @@ public class HomeGaneshaAdapter extends RecyclerView.Adapter<HomeGaneshaAdapter.
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_h_g_container, parent, false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_p_g_container, parent, false);
 
         return new MyViewHolder(itemView);
     }
@@ -65,7 +67,11 @@ public class HomeGaneshaAdapter extends RecyclerView.Adapter<HomeGaneshaAdapter.
         final GaneshaData data = dataFiltered.get(position);
         holder.cshared_by.setText(data.getcshared_by());
         holder.cplace_name.setText(data.getcplace_name());
-        Picasso.with(context).load(data.cimg_path).placeholder(R.drawable.img_err).error(R.drawable.img_err).into(holder.img_path);
+        holder.cimg_caption.setText(data.getcimg_caption());
+        //Glide.with(context).load(data.cimg_path).placeholder(R.drawable.img_err_two).error(R.drawable.img_err_two).into(holder.cimg_path);
+
+        Picasso.with(context).load(data.cimg_path).placeholder(R.drawable.img_err_two).error(R.drawable.img_err_two).into(holder.cimg_path);
+
         //Glide.with(context).load(data.getcimg_path()).apply(RequestOptions.circleCropTransform()).into(holder.thumbnail);
     }
 
@@ -110,7 +116,7 @@ public class HomeGaneshaAdapter extends RecyclerView.Adapter<HomeGaneshaAdapter.
         };
     }
 
-    public interface HomeGaneshaTwoAdapterListener {
+    public interface GaneshaPreparationAdapterListener {
         void onDataSelected(GaneshaData data);
     }
 }

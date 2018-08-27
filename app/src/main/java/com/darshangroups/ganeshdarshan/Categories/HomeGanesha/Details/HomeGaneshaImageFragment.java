@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.darshangroups.ganeshdarshan.R;
+import com.squareup.picasso.Picasso;
 
 public class HomeGaneshaImageFragment extends Fragment {
     private ImageView imageView;
@@ -33,7 +34,7 @@ public class HomeGaneshaImageFragment extends Fragment {
             String ctitle = bundle.getString("ctitle", null);
 
 
-            Glide.with(getActivity()).load(cimg_path).placeholder(R.drawable.pray).error(R.drawable.pray).into(imageView);
+            Picasso.with(getActivity()).load(cimg_path).placeholder(R.drawable.img_err).error(R.drawable.img_err).into(imageView);
             tvCtitle.setText(ctitle);
             tvCshared_by.setText("Shared By : " + cshared_by);
             tvCplacename.setText("From : " + cplace_name);

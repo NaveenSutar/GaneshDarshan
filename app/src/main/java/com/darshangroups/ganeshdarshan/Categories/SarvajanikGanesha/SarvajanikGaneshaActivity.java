@@ -4,9 +4,11 @@ import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.darshangroups.ganeshdarshan.Categories.SarvajanikGanesha.Adapter.SarvajanikGaneshaAdapter;
@@ -38,6 +40,8 @@ public class SarvajanikGaneshaActivity extends AppCompatActivity {
             FortRoadView, HindalgaView, HonagaView, KangraliView, KhanapurView, NehruNagarView,
             ShahapurView, TilakwadiView, VadagaonView;
     private SarvajanikGaneshaAdapter mAdapter;
+    private CardView c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14;
+    private TextView t1;
 
     private ShimmerFrameLayout mShimmerViewContainer;
 
@@ -47,6 +51,21 @@ public class SarvajanikGaneshaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_s_g_main);
 
         mShimmerViewContainer = findViewById(R.id.shimmer_view_container);
+        c1 = (CardView)  findViewById(R.id.c1);
+        c2 = (CardView)  findViewById(R.id.c2);
+        c3 = (CardView)  findViewById(R.id.c3);
+        c4 = (CardView)  findViewById(R.id.c4);
+        c5 = (CardView)  findViewById(R.id.c5);
+        c6 = (CardView)  findViewById(R.id.c6);
+        c7 = (CardView)  findViewById(R.id.c7);
+        c8 = (CardView)  findViewById(R.id.c8);
+        c9 = (CardView)  findViewById(R.id.c9);
+        c10 = (CardView)  findViewById(R.id.c10);
+        c11 = (CardView)  findViewById(R.id.c11);
+        c12 = (CardView)  findViewById(R.id.c12);
+        c13 = (CardView)  findViewById(R.id.c13);
+        c14 = (CardView)  findViewById(R.id.c14);
+        t1 = (TextView) findViewById(R.id.t1);
         //Make call to AsyncTask
         new AsyncFetch().execute();
     }
@@ -86,7 +105,7 @@ public class SarvajanikGaneshaActivity extends AppCompatActivity {
 
                 // Enter URL address where your json file resides
                 // Even you can make call to php file which returns json data
-                url = new URL("http://192.168.1.13/ganappa/sarvajanik.php?key=123");
+                url = new URL("http://brainways.in/ganeshdarshan/sarvajanik.php?key=123");
 
             } catch (MalformedURLException e) {
                 // TODO Auto-generated catch block
@@ -172,11 +191,13 @@ public class SarvajanikGaneshaActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Sorry, Could not connect! Please Try again Later.", Toast.LENGTH_LONG).show();
             } else {
                 try {
+                    int i, j, k, l, m, n, o, p, q, r, s, t, u, v;
+
                     JSONObject jsonObject = new JSONObject(result);
                     JSONArray jArrayAngol = jsonObject.getJSONArray("Angol");
                     // Extract data from json and store into ArrayList as class objects
-                    for (int i = 0; i < jArrayAngol.length(); i++) {
-                        JSONObject json_data = jArrayAngol.getJSONObject(i);
+                    for (v = 0; v < jArrayAngol.length(); v++) {
+                        JSONObject json_data = jArrayAngol.getJSONObject(v);
                         GaneshaData AD = new GaneshaData();
                         AD.nimg_id = json_data.getString("nimg_id");
                         AD.cimg_path = json_data.getString("cimg_path");
@@ -189,18 +210,23 @@ public class SarvajanikGaneshaActivity extends AppCompatActivity {
                         AD.cimg_caption = json_data.getString("cimg_caption");
                         AD.ctitle = json_data.getString("ctitle");
                         AngolData.add(AD);
-
                     }
 
-                    // Setup and Handover data to recyclerview
-                    AngolView = (RecyclerView) findViewById(R.id.angol_rcview);
-                    mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, AngolData);
-                    AngolView.setAdapter(mAdapter);
-                    AngolView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+                    if(v == 0){c1.setVisibility(View.GONE);}
+
+                    else {
+                        // Setup and Handover data to recyclerview
+                        c1.setVisibility(View.VISIBLE);
+                        AngolView = (RecyclerView) findViewById(R.id.angol_rcview);
+                        mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, AngolData);
+                        AngolView.setAdapter(mAdapter);
+                        AngolView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+                    }
 
                     JSONArray jArrayAutoNagar = jsonObject.getJSONArray("Auto Nagar");
+
                     // Extract data from json and store into ArrayList as class objects
-                    for (int i = 0; i < jArrayAutoNagar.length(); i++) {
+                    for (i=0; i < jArrayAutoNagar.length(); i++) {
                         JSONObject json_data = jArrayAutoNagar.getJSONObject(i);
                         GaneshaData AND = new GaneshaData();
                         AND.nimg_id = json_data.getString("nimg_id");
@@ -216,16 +242,23 @@ public class SarvajanikGaneshaActivity extends AppCompatActivity {
                         AutoNagarData.add(AND);
                     }
 
-                    // Setup and Handover data to recyclerview
-                    AutoNagarView = (RecyclerView) findViewById(R.id.autonagar_rcview);
-                    mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, AutoNagarData);
-                    AutoNagarView.setAdapter(mAdapter);
-                    AutoNagarView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+                    if(i == 0)
+                        c2.setVisibility(View.GONE);
+
+                    else
+                    {
+                        // Setup and Handover data to recyclerview
+                        c2.setVisibility(View.VISIBLE);
+                        AutoNagarView = (RecyclerView) findViewById(R.id.autonagar_rcview);
+                        mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, AutoNagarData);
+                        AutoNagarView.setAdapter(mAdapter);
+                        AutoNagarView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+                    }
 
                     JSONArray jArrayBogarves = jsonObject.getJSONArray("Bogarves");
                     // Extract data from json and store into ArrayList as class objects
-                    for (int i = 0; i < jArrayBogarves.length(); i++) {
-                        JSONObject json_data = jArrayBogarves.getJSONObject(i);
+                    for (j = 0; j < jArrayBogarves.length(); j++) {
+                        JSONObject json_data = jArrayBogarves.getJSONObject(j);
                         GaneshaData BD = new GaneshaData();
                         BD.nimg_id = json_data.getString("nimg_id");
                         BD.cimg_path = json_data.getString("cimg_path");
@@ -240,16 +273,21 @@ public class SarvajanikGaneshaActivity extends AppCompatActivity {
                         BogarvesData.add(BD);
                     }
 
-                    // Setup and Handover data to recyclerview
-                    BogarvesView = (RecyclerView) findViewById(R.id.bogarves_rcview);
-                    mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, BogarvesData);
-                    BogarvesView.setAdapter(mAdapter);
-                    BogarvesView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+                    if(j == 0){c3.setVisibility(View.GONE);}
+
+                    else {
+                        // Setup and Handover data to recyclerview
+                        c3.setVisibility(View.VISIBLE);
+                        BogarvesView = (RecyclerView) findViewById(R.id.bogarves_rcview);
+                        mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, BogarvesData);
+                        BogarvesView.setAdapter(mAdapter);
+                        BogarvesView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+                    }
 
                     JSONArray jArrayCamp = jsonObject.getJSONArray("Camp");
                     // Extract data from json and store into ArrayList as class objects
-                    for (int i = 0; i < jArrayCamp.length(); i++) {
-                        JSONObject json_data = jArrayCamp.getJSONObject(i);
+                    for (k = 0; k < jArrayCamp.length(); k++) {
+                        JSONObject json_data = jArrayCamp.getJSONObject(k);
                         GaneshaData CD = new GaneshaData();
                         CD.nimg_id = json_data.getString("nimg_id");
                         CD.cimg_path = json_data.getString("cimg_path");
@@ -264,16 +302,21 @@ public class SarvajanikGaneshaActivity extends AppCompatActivity {
                         CampData.add(CD);
                     }
 
-                    // Setup and Handover data to recyclerview
-                    CampView = (RecyclerView) findViewById(R.id.camp_rcview);
-                    mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, CampData);
-                    CampView.setAdapter(mAdapter);
-                    CampView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+                    if(k == 0){c4.setVisibility(View.GONE);}
+
+                    else {
+                        // Setup and Handover data to recyclerview
+                        c4.setVisibility(View.VISIBLE);
+                        CampView = (RecyclerView) findViewById(R.id.camp_rcview);
+                        mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, CampData);
+                        CampView.setAdapter(mAdapter);
+                        CampView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+                    }
 
                     JSONArray jArrayChennamma = jsonObject.getJSONArray("Chennamma");
                     // Extract data from json and store into ArrayList as class objects
-                    for (int i = 0; i < jArrayChennamma.length(); i++) {
-                        JSONObject json_data = jArrayChennamma.getJSONObject(i);
+                    for (l = 0; l < jArrayChennamma.length(); l++) {
+                        JSONObject json_data = jArrayChennamma.getJSONObject(l);
                         GaneshaData ChD = new GaneshaData();
                         ChD.nimg_id = json_data.getString("nimg_id");
                         ChD.cimg_path = json_data.getString("cimg_path");
@@ -288,16 +331,21 @@ public class SarvajanikGaneshaActivity extends AppCompatActivity {
                         ChennammaData.add(ChD);
                     }
 
-                    // Setup and Handover data to recyclerview
-                    ChennammaView = (RecyclerView) findViewById(R.id.chennamma_rcview);
-                    mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, ChennammaData);
-                    ChennammaView.setAdapter(mAdapter);
-                    ChennammaView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+                    if(l == 0){c5.setVisibility(View.GONE);}
+
+                    else {
+                        // Setup and Handover data to recyclerview
+                        c5.setVisibility(View.VISIBLE);
+                        ChennammaView = (RecyclerView) findViewById(R.id.chennamma_rcview);
+                        mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, ChennammaData);
+                        ChennammaView.setAdapter(mAdapter);
+                        ChennammaView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+                    }
 
                     JSONArray jArrayFortRoad = jsonObject.getJSONArray("Fort Road");
                     // Extract data from json and store into ArrayList as class objects
-                    for (int i = 0; i < jArrayFortRoad.length(); i++) {
-                        JSONObject json_data = jArrayFortRoad.getJSONObject(i);
+                    for (m = 0; m < jArrayFortRoad.length(); m++) {
+                        JSONObject json_data = jArrayFortRoad.getJSONObject(m);
                         GaneshaData FRD = new GaneshaData();
                         FRD.nimg_id = json_data.getString("nimg_id");
                         FRD.cimg_path = json_data.getString("cimg_path");
@@ -312,16 +360,21 @@ public class SarvajanikGaneshaActivity extends AppCompatActivity {
                         FortRoadData.add(FRD);
                     }
 
-                    // Setup and Handover data to recyclerview
-                    FortRoadView = (RecyclerView) findViewById(R.id.fortroad_rcview);
-                    mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, FortRoadData);
-                    FortRoadView.setAdapter(mAdapter);
-                    FortRoadView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+                    if(m == 0){c6.setVisibility(View.GONE);}
+
+                    else {
+                        // Setup and Handover data to recyclerview
+                        c6.setVisibility(View.VISIBLE);
+                        FortRoadView = (RecyclerView) findViewById(R.id.fortroad_rcview);
+                        mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, FortRoadData);
+                        FortRoadView.setAdapter(mAdapter);
+                        FortRoadView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+                    }
 
                     JSONArray jArrayHindalga = jsonObject.getJSONArray("Hindalga");
                     // Extract data from json and store into ArrayList as class objects
-                    for (int i = 0; i < jArrayHindalga.length(); i++) {
-                        JSONObject json_data = jArrayHindalga.getJSONObject(i);
+                    for (n = 0; n < jArrayHindalga.length(); n++) {
+                        JSONObject json_data = jArrayHindalga.getJSONObject(n);
                         GaneshaData HD = new GaneshaData();
                         HD.nimg_id = json_data.getString("nimg_id");
                         HD.cimg_path = json_data.getString("cimg_path");
@@ -336,16 +389,21 @@ public class SarvajanikGaneshaActivity extends AppCompatActivity {
                         HindalgaData.add(HD);
                     }
 
-                    // Setup and Handover data to recyclerview
-                    HindalgaView = (RecyclerView) findViewById(R.id.hindalga_rcview);
-                    mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, HindalgaData);
-                    HindalgaView.setAdapter(mAdapter);
-                    HindalgaView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+                    if(n == 0){c7.setVisibility(View.GONE);}
+
+                    else {
+                        // Setup and Handover data to recyclerview
+                        c7.setVisibility(View.VISIBLE);
+                        HindalgaView = (RecyclerView) findViewById(R.id.hindalga_rcview);
+                        mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, HindalgaData);
+                        HindalgaView.setAdapter(mAdapter);
+                        HindalgaView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+                    }
 
                     JSONArray jArrayHonaga = jsonObject.getJSONArray("Honaga");
                     // Extract data from json and store into ArrayList as class objects
-                    for (int i = 0; i < jArrayHonaga.length(); i++) {
-                        JSONObject json_data = jArrayHonaga.getJSONObject(i);
+                    for (o = 0; o < jArrayHonaga.length();o++) {
+                        JSONObject json_data = jArrayHonaga.getJSONObject(o);
                         GaneshaData HoD = new GaneshaData();
                         HoD.nimg_id = json_data.getString("nimg_id");
                         HoD.cimg_path = json_data.getString("cimg_path");
@@ -360,16 +418,21 @@ public class SarvajanikGaneshaActivity extends AppCompatActivity {
                         HonagaData.add(HoD);
                     }
 
-                    // Setup and Handover data to recyclerview
-                    HonagaView = (RecyclerView) findViewById(R.id.honaga_rcview);
-                    mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, HonagaData);
-                    HonagaView.setAdapter(mAdapter);
-                    HonagaView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+                    if(o == 0){c8.setVisibility(View.GONE);}
+
+                    else {
+                        // Setup and Handover data to recyclerview
+                        c8.setVisibility(View.VISIBLE);
+                        HonagaView = (RecyclerView) findViewById(R.id.honaga_rcview);
+                        mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, HonagaData);
+                        HonagaView.setAdapter(mAdapter);
+                        HonagaView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+                    }
 
                     JSONArray jArrayKangrali = jsonObject.getJSONArray("Kangrali");
                     // Extract data from json and store into ArrayList as class objects
-                    for (int i = 0; i < jArrayKangrali.length(); i++) {
-                        JSONObject json_data = jArrayKangrali.getJSONObject(i);
+                    for (p = 0; p < jArrayKangrali.length(); p++) {
+                        JSONObject json_data = jArrayKangrali.getJSONObject(p);
                         GaneshaData KD = new GaneshaData();
                         KD.nimg_id = json_data.getString("nimg_id");
                         KD.cimg_path = json_data.getString("cimg_path");
@@ -384,16 +447,21 @@ public class SarvajanikGaneshaActivity extends AppCompatActivity {
                         KangraliData.add(KD);
                     }
 
-                    // Setup and Handover data to recyclerview
-                    KangraliView = (RecyclerView) findViewById(R.id.kangrali_rcview);
-                    mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, KangraliData);
-                    KangraliView.setAdapter(mAdapter);
-                    KangraliView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+                    if(p == 0){c9.setVisibility(View.GONE);}
+
+                    else {
+                        // Setup and Handover data to recyclerview
+                        c9.setVisibility(View.VISIBLE);
+                        KangraliView = (RecyclerView) findViewById(R.id.kangrali_rcview);
+                        mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, KangraliData);
+                        KangraliView.setAdapter(mAdapter);
+                        KangraliView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+                    }
 
                     JSONArray jArrayKhanapur = jsonObject.getJSONArray("Khanapur");
                     // Extract data from json and store into ArrayList as class objects
-                    for (int i = 0; i < jArrayKhanapur.length(); i++) {
-                        JSONObject json_data = jArrayKhanapur.getJSONObject(i);
+                    for (q = 0; q < jArrayKhanapur.length(); q++) {
+                        JSONObject json_data = jArrayKhanapur.getJSONObject(q);
                         GaneshaData KhD = new GaneshaData();
                         KhD.nimg_id = json_data.getString("nimg_id");
                         KhD.cimg_path = json_data.getString("cimg_path");
@@ -408,16 +476,21 @@ public class SarvajanikGaneshaActivity extends AppCompatActivity {
                         KhanapurData.add(KhD);
                     }
 
-                    // Setup and Handover data to recyclerview
-                    KhanapurView = (RecyclerView) findViewById(R.id.khanapur_rcview);
-                    mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, KhanapurData);
-                    KhanapurView.setAdapter(mAdapter);
-                    KhanapurView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+                    if(q == 0){c10.setVisibility(View.GONE);}
+
+                    else {
+                        // Setup and Handover data to recyclerview
+                        c10.setVisibility(View.VISIBLE);
+                        KhanapurView = (RecyclerView) findViewById(R.id.khanapur_rcview);
+                        mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, KhanapurData);
+                        KhanapurView.setAdapter(mAdapter);
+                        KhanapurView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+                    }
 
                     JSONArray jArrayNehruNagar = jsonObject.getJSONArray("Nehru Nagar");
                     // Extract data from json and store into ArrayList as class objects
-                    for (int i = 0; i < jArrayNehruNagar.length(); i++) {
-                        JSONObject json_data = jArrayNehruNagar.getJSONObject(i);
+                    for (r = 0; r < jArrayNehruNagar.length(); r++) {
+                        JSONObject json_data = jArrayNehruNagar.getJSONObject(r);
                         GaneshaData NND = new GaneshaData();
                         NND.nimg_id = json_data.getString("nimg_id");
                         NND.cimg_path = json_data.getString("cimg_path");
@@ -432,16 +505,21 @@ public class SarvajanikGaneshaActivity extends AppCompatActivity {
                         NehruNagarData.add(NND);
                     }
 
-                    // Setup and Handover data to recyclerview
-                    NehruNagarView = (RecyclerView) findViewById(R.id.nehrunagar_rcview);
-                    mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, NehruNagarData);
-                    NehruNagarView.setAdapter(mAdapter);
-                    NehruNagarView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+                    if(r == 0){c11.setVisibility(View.GONE);}
+
+                    else {
+                        // Setup and Handover data to recyclerview
+                        c11.setVisibility(View.VISIBLE);
+                        NehruNagarView = (RecyclerView) findViewById(R.id.nehrunagar_rcview);
+                        mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, NehruNagarData);
+                        NehruNagarView.setAdapter(mAdapter);
+                        NehruNagarView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+                    }
 
                     JSONArray jArrayShahapur = jsonObject.getJSONArray("Shahapur");
                     // Extract data from json and store into ArrayList as class objects
-                    for (int i = 0; i < jArrayShahapur.length(); i++) {
-                        JSONObject json_data = jArrayShahapur.getJSONObject(i);
+                    for (s = 0; s < jArrayShahapur.length(); s++) {
+                        JSONObject json_data = jArrayShahapur.getJSONObject(s);
                         GaneshaData SD = new GaneshaData();
                         SD.nimg_id = json_data.getString("nimg_id");
                         SD.cimg_path = json_data.getString("cimg_path");
@@ -456,16 +534,21 @@ public class SarvajanikGaneshaActivity extends AppCompatActivity {
                         ShahapurData.add(SD);
                     }
 
-                    // Setup and Handover data to recyclerview
-                    ShahapurView = (RecyclerView) findViewById(R.id.shahpur_rcview);
-                    mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, ShahapurData);
-                    ShahapurView.setAdapter(mAdapter);
-                    ShahapurView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+                    if(s == 0){c12.setVisibility(View.GONE);}
+
+                    else {
+                        // Setup and Handover data to recyclerview
+                        c12.setVisibility(View.VISIBLE);
+                        ShahapurView = (RecyclerView) findViewById(R.id.shahpur_rcview);
+                        mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, ShahapurData);
+                        ShahapurView.setAdapter(mAdapter);
+                        ShahapurView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+                    }
 
                     JSONArray jArrayTilakwadi = jsonObject.getJSONArray("Tilakwadi");
                     // Extract data from json and store into ArrayList as class objects
-                    for (int i = 0; i < jArrayTilakwadi.length(); i++) {
-                        JSONObject json_data = jArrayTilakwadi.getJSONObject(i);
+                    for (t = 0; t < jArrayTilakwadi.length(); t++) {
+                        JSONObject json_data = jArrayTilakwadi.getJSONObject(t);
                         GaneshaData TD = new GaneshaData();
                         TD.nimg_id = json_data.getString("nimg_id");
                         TD.cimg_path = json_data.getString("cimg_path");
@@ -480,16 +563,21 @@ public class SarvajanikGaneshaActivity extends AppCompatActivity {
                         TilakwadiData.add(TD);
                     }
 
-                    // Setup and Handover data to recyclerview
-                    TilakwadiView = (RecyclerView) findViewById(R.id.tilakwadi_rcview);
-                    mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, TilakwadiData);
-                    TilakwadiView.setAdapter(mAdapter);
-                    TilakwadiView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+                    if(t == 0){c13.setVisibility(View.GONE);}
+
+                    else {
+                        // Setup and Handover data to recyclerview
+                        c13.setVisibility(View.VISIBLE);
+                        TilakwadiView = (RecyclerView) findViewById(R.id.tilakwadi_rcview);
+                        mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, TilakwadiData);
+                        TilakwadiView.setAdapter(mAdapter);
+                        TilakwadiView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+                    }
 
                     JSONArray jArrayVadagaon = jsonObject.getJSONArray("Vadagaon");
                     // Extract data from json and store into ArrayList as class objects
-                    for (int i = 0; i < jArrayVadagaon.length(); i++) {
-                        JSONObject json_data = jArrayVadagaon.getJSONObject(i);
+                    for (u = 0; u < jArrayVadagaon.length(); u++) {
+                        JSONObject json_data = jArrayVadagaon.getJSONObject(u);
                         GaneshaData VD = new GaneshaData();
                         VD.nimg_id = json_data.getString("nimg_id");
                         VD.cimg_path = json_data.getString("cimg_path");
@@ -504,13 +592,24 @@ public class SarvajanikGaneshaActivity extends AppCompatActivity {
                         VadagaonData.add(VD);
                     }
 
+                    if(u == 0){c14.setVisibility(View.GONE);}
+
+                    else
+                    {
+                        c14.setVisibility(View.VISIBLE);
+                        VadagaonView = (RecyclerView) findViewById(R.id.vadagaon_rcview);
+                        mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, VadagaonData);
+                        VadagaonView.setAdapter(mAdapter);
+                        VadagaonView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+                    }
                     // Setup and Handover data to recyclerview
-                    VadagaonView = (RecyclerView) findViewById(R.id.vadagaon_rcview);
-                    mAdapter = new SarvajanikGaneshaAdapter(SarvajanikGaneshaActivity.this, VadagaonData);
-                    VadagaonView.setAdapter(mAdapter);
-                    VadagaonView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+
 
                 } catch (JSONException e) {
+                    c1.setVisibility(View.GONE); c2.setVisibility(View.GONE); c3.setVisibility(View.GONE); c4.setVisibility(View.GONE);
+                    c5.setVisibility(View.GONE); c6.setVisibility(View.GONE); c7.setVisibility(View.GONE); c8.setVisibility(View.GONE);
+                    c9.setVisibility(View.GONE); c10.setVisibility(View.GONE); c11.setVisibility(View.GONE); c12.setVisibility(View.GONE);
+                    c13.setVisibility(View.GONE); c14.setVisibility(View.GONE); t1.setVisibility(View.GONE);
                     //Toast.makeText(getActivity(), e.toString(), Toast.LENGTH_LONG).show();
                     Toast.makeText(SarvajanikGaneshaActivity.this, "Unable to fetch the data.Please try after sometime.", Toast.LENGTH_LONG).show();
                 }

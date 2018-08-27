@@ -14,8 +14,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp"
-        app:cardCornerRadius="0.5dp"
-        app:cardElevation="1dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp"
         app:cardUseCompatPadding="true">
 
         <LinearLayout
@@ -30,7 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/home_hero"
+                android:src="@drawable/img_err_two"
                 tools:ignore="ContentDescription,RtlHardcoded" />
 
             <LinearLayout

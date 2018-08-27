@@ -55,11 +55,12 @@
         </com.facebook.shimmer.ShimmerFrameLayout>
 
         <TextView
+            android:id="@+id/t1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
-            android:text="@string/get_the_blessings_of_lord_ganesha_right_in_you_hand_nhere_is_the_list_of_area_s_that_you_can_view"
+            android:text="Get the blessings of Lord Ganesha Right in you hand.  \nHere is the list of area\'s that you can view."
             android:textSize="12dp" />
 
         <android.support.v7.widget.CardView
@@ -79,7 +80,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
-                    android:paddingLeft="3dp"
+                    android:paddingLeft="8dp"
                     android:text="Angol"
                     android:textColor="#333333"
                     android:textSize="15sp"
@@ -92,7 +93,7 @@
                     android:layout_marginBottom="3dp"
                     android:layout_weight="1"
                     android:orientation="horizontal"
-                    android:paddingTop="3dp" />
+                    android:layout_marginLeft="3dp" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -113,7 +114,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
-                    android:paddingLeft="3dp"
+                    android:paddingLeft="8dp"
                     android:text="Auto Nagar"
                     android:textColor="#333333"
                     android:textSize="15sp"
@@ -125,8 +126,8 @@
                     android:layout_height="0dp"
                     android:layout_marginBottom="3dp"
                     android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:paddingTop="3dp" />
+                    android:layout_marginLeft="3dp"
+                    android:orientation="horizontal" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -147,7 +148,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
-                    android:paddingLeft="3dp"
+                    android:paddingLeft="8dp"
                     android:text="Bogarves"
                     android:textColor="#333333"
                     android:textSize="15sp"
@@ -158,9 +159,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="3dp"
                     android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:paddingTop="3dp" />
+                    android:orientation="horizontal" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -181,7 +182,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
-                    android:paddingLeft="3dp"
+                    android:paddingLeft="8dp"
                     android:text="Camp"
                     android:textColor="#333333"
                     android:textSize="15sp"
@@ -194,7 +195,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:orientation="horizontal"
-                    android:paddingTop="3dp" />
+                    android:layout_marginLeft="3dp"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -215,7 +216,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
-                    android:paddingLeft="3dp"
+                    android:paddingLeft="8dp"
                     android:text="Chennamma"
                     android:textColor="#333333"
                     android:textSize="15sp"
@@ -226,9 +227,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="3dp"
                     android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:paddingTop="3dp" />
+                    android:orientation="horizontal"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -249,7 +250,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
-                    android:paddingLeft="3dp"
+                    android:paddingLeft="8dp"
                     android:text="Fort Road"
                     android:textColor="#333333"
                     android:textSize="15sp"
@@ -262,7 +263,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:orientation="horizontal"
-                    android:paddingTop="3dp" />
+                    android:layout_marginLeft="3dp"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -283,7 +284,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
-                    android:paddingLeft="3dp"
+                    android:paddingLeft="8dp"
                     android:text="Hindalga"
                     android:textColor="#333333"
                     android:textSize="15sp"
@@ -296,7 +297,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:orientation="horizontal"
-                    android:paddingTop="3dp" />
+                    android:layout_marginLeft="3dp"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -317,7 +318,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
-                    android:paddingLeft="3dp"
+                    android:paddingLeft="8dp"
                     android:text="Honaga"
                     android:textColor="#333333"
                     android:textSize="15sp"
@@ -330,7 +331,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:orientation="horizontal"
-                    android:paddingTop="3dp" />
+                    android:layout_marginLeft="3dp"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -351,7 +352,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
-                    android:paddingLeft="3dp"
+                    android:paddingLeft="8dp"
                     android:text="Kangrali"
                     android:textColor="#333333"
                     android:textSize="15sp"
@@ -364,7 +365,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:orientation="horizontal"
-                    android:paddingTop="3dp" />
+                    android:layout_marginLeft="3dp"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -385,7 +386,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
-                    android:paddingLeft="3dp"
+                    android:paddingLeft="8dp"
                     android:text="Khanapur"
                     android:textColor="#333333"
                     android:textSize="15sp"
@@ -398,7 +399,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:orientation="horizontal"
-                    android:paddingTop="3dp" />
+                    android:layout_marginLeft="3dp" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -419,7 +420,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
-                    android:paddingLeft="3dp"
+                    android:paddingLeft="8dp"
                     android:text="Nehru Nagar"
                     android:textColor="#333333"
                     android:textSize="15sp"
@@ -432,7 +433,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:orientation="horizontal"
-                    android:paddingTop="3dp" />
+                    android:layout_marginLeft="3dp"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -453,7 +454,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
-                    android:paddingLeft="3dp"
+                    android:paddingLeft="8dp"
                     android:text="Shahpur"
                     android:textColor="#333333"
                     android:textSize="15sp"
@@ -466,6 +467,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:orientation="horizontal"
+                    android:layout_marginLeft="3dp"
                     android:paddingTop="3dp" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -487,7 +489,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
-                    android:paddingLeft="3dp"
+                    android:paddingLeft="8dp"
                     android:text="Tilakwadi"
                     android:textColor="#333333"
                     android:textSize="15sp"
@@ -500,7 +502,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:orientation="horizontal"
-                    android:paddingTop="3dp" />
+                    android:layout_marginLeft="3dp"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -522,7 +524,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
-                    android:paddingLeft="3dp"
+                    android:paddingLeft="8dp"
                     android:text="Vadagaon"
                     android:textColor="#333333"
                     android:textSize="15sp"
@@ -535,7 +537,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:orientation="horizontal"
-                    android:paddingTop="3dp" />
+                    android:layout_marginLeft="3dp"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
     </LinearLayout>
