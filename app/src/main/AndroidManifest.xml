@@ -30,15 +30,23 @@
 
         <activity android:name=".HomeActivity" android:configChanges="orientation" android:screenOrientation="portrait" android:label="@string/title_activity_welcome"/>
 
-        <activity android:name=".Categories.SarvajanikGanesha.SarvajanikGaneshaActivity" android:theme="@style/AppThemeBar" android:label="Sarvajanik Ganapati" tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Categories.SarvajanikGaneshaOldPackage.SarvajanikGaneshaActivity"
+            android:label="Sarvajanik Ganapati"
+            android:theme="@style/AppThemeBar"
+            tools:ignore="InnerclassSeparator" />
 
         <activity android:name=".Categories.GaneshaPreparation.GaneshaPreparationActivity" android:theme="@style/AppThemeBar" android:label="Preparation for Ganapati" tools:ignore="InnerclassSeparator" />
 
         <activity android:name=".Categories.HomeGanesha.Details.HomeGaneshaSwipeActivity" android:label="Home Ganesha Images" tools:ignore="InnerclassSeparator" />
 
-        <activity android:name=".Categories.GaneshaPreparation.Details.GaneshaPreparationSwipeActivity" android:label="Home Ganesha Images" tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Categories.GaneshaPreparation.Details.GaneshaPreparationSwipeActivity"
+            tools:ignore="InnerclassSeparator" />
 
-        <activity android:name=".Categories.SarvajanikGanesha.Details.SarvajanikGaneshaImageFragment" android:label="Home Ganesha Images" tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Categories.SarvajanikGaneshaOldPackage.Details.SarvajanikGaneshaImageFragment"
+            tools:ignore="InnerclassSeparator" />
 
         <activity android:name=".Categories.HomeGanesha.HomeGaneshaActivity"
             android:label="@string/toolbar_title"
@@ -50,5 +58,108 @@
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".Categories.SarvajanikGanapati.Areas.Angol.AngolActivity"
+            android:label="Angol Ganapati's"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeBar" />
+        <activity android:name=".Categories.SarvajanikGanapati.Areas.Angol.Details.SwipeActivity" />
+
+        <activity
+            android:name=".Categories.SarvajanikGanapati.Areas.AutoNagar.AutoNagarActivity"
+            android:label="Auto Nagar Ganapati's"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeBar" />
+        <activity android:name=".Categories.SarvajanikGanapati.Areas.AutoNagar.Details.SwipeActivity" />
+
+        <activity
+            android:name=".Categories.SarvajanikGanapati.Areas.Bogarves.BogarvesActivity"
+            android:label="Bogarves Ganapati's"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeBar" />
+        <activity android:name=".Categories.SarvajanikGanapati.Areas.Bogarves.Details.SwipeActivity" />
+
+        <activity
+            android:name=".Categories.SarvajanikGanapati.Areas.Camp.CampActivity"
+            android:label="Camp Ganapati's"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeBar" />
+        <activity android:name=".Categories.SarvajanikGanapati.Areas.Camp.Details.SwipeActivity" />
+
+        <activity
+            android:name=".Categories.SarvajanikGanapati.Areas.Chennamma.ChennammaActivity"
+            android:label="Chennamma Ganapati's"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeBar" />
+        <activity android:name=".Categories.SarvajanikGanapati.Areas.Chennamma.Details.SwipeActivity" />
+
+        <activity
+            android:name=".Categories.SarvajanikGanapati.Areas.FortRoad.FortRoadActivity"
+            android:label="Fort Road Ganapati's"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeBar" />
+        <activity android:name=".Categories.SarvajanikGanapati.Areas.FortRoad.Details.SwipeActivity" />
+
+        <activity
+            android:name=".Categories.SarvajanikGanapati.Areas.Hindalga.HindalgaActivity"
+            android:label="Hindalga Ganapati's"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeBar" />
+        <activity android:name=".Categories.SarvajanikGanapati.Areas.Hindalga.Details.SwipeActivity" />
+
+        <activity
+            android:name=".Categories.SarvajanikGanapati.Areas.Honaga.HonagaActivity"
+            android:label="Honaga Ganapati's"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeBar" />
+        <activity android:name=".Categories.SarvajanikGanapati.Areas.Honaga.Details.SwipeActivity" />
+
+        <activity
+            android:name=".Categories.SarvajanikGanapati.Areas.Kangrali.KangraliActivity"
+            android:label="Kangrali Ganapati's"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeBar" />
+        <activity android:name=".Categories.SarvajanikGanapati.Areas.Kangrali.Details.SwipeActivity" />
+
+        <activity
+            android:name=".Categories.SarvajanikGanapati.Areas.Khanapur.KhanapurActivity"
+            android:label="Khanapur Ganapati's"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeBar" />
+        <activity android:name=".Categories.SarvajanikGanapati.Areas.Khanapur.Details.SwipeActivity" />
+
+        <activity
+            android:name=".Categories.SarvajanikGanapati.Areas.NehruNagar.NehruNagarActivity"
+            android:label="Nehru Nagar Ganapati's"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeBar" />
+        <activity android:name=".Categories.SarvajanikGanapati.Areas.NehruNagar.Details.SwipeActivity" />
+
+        <activity
+            android:name=".Categories.SarvajanikGanapati.Areas.Shahapur.ShahapurActivity"
+            android:label="Shahapur Ganapati's"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeBar" />
+        <activity android:name=".Categories.SarvajanikGanapati.Areas.Shahapur.Details.SwipeActivity" />
+
+        <activity
+            android:name=".Categories.SarvajanikGanapati.Areas.Tilakwadi.TilakwadiActivity"
+            android:label="Tilakwadi Ganapati's"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeBar" />
+        <activity android:name=".Categories.SarvajanikGanapati.Areas.Tilakwadi.Details.SwipeActivity" />
+
+        <activity
+            android:name=".Categories.SarvajanikGanapati.Areas.Vadagaon.VadagaonActivity"
+            android:label="Vadagaon Ganapati's"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeBar" />
+        <activity android:name=".Categories.SarvajanikGanapati.Areas.Vadagaon.Details.SwipeActivity" />
+
+        <activity
+            android:name=".Categories.SarvajanikGanapati.SarvajanikGanapatiActivity"
+            android:label="Sarvajanik Ganapati"
+            android:theme="@style/AppThemeBar" />
     </application>
 </manifest>

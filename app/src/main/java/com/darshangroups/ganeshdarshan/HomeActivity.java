@@ -1,14 +1,14 @@
 package com.darshangroups.ganeshdarshan;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
 
 import com.darshangroups.ganeshdarshan.Categories.GaneshaPreparation.GaneshaPreparationActivity;
 import com.darshangroups.ganeshdarshan.Categories.HomeGanesha.HomeGaneshaActivity;
-import com.darshangroups.ganeshdarshan.Categories.SarvajanikGanesha.SarvajanikGaneshaActivity;
+import com.darshangroups.ganeshdarshan.Categories.SarvajanikGanapati.SarvajanikGanapatiActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -26,7 +26,7 @@ public class HomeActivity extends AppCompatActivity {
         c1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent Sarvajanik = new Intent(HomeActivity.this, SarvajanikGaneshaActivity.class);
+                Intent Sarvajanik = new Intent(HomeActivity.this, SarvajanikGanapatiActivity.class);
                 startActivity(Sarvajanik);
             }
         });

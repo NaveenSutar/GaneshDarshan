@@ -33,10 +33,25 @@
     <string name="footer">Made With ♥ by Darshan Design Pro</string>
 
     <!--Search Variables-->
-        <string name="action_settings">Settings</string>
-        <string name="toolbar_title">Home Ganesha</string>
-        <string name="action_search">Search</string>
-        <string name="search_hint">Type Your Name…</string>
+    <string name="action_settings">Settings</string>
+    <string name="toolbar_title">Home Ganesha</string>
+    <string name="action_search">Search</string>
+    <string name="search_hint">Type Your Name…</string>
+
     <string name="get_the_blessings_of_lord_ganesha_right_in_you_hand_nhere_is_the_list_of_area_s_that_you_can_view">Get the blessings of Lord Ganesha Right in you hand.  Here is the list of area\'s that you can view.</string>
 
+    <string name="area_1">Angol</string>
+    <string name="area_2">Auto Nagar</string>
+    <string name="area_3">Bogarves</string>
+    <string name="area_4">Camp</string>
+    <string name="area_5">Chennama</string>
+    <string name="area_6">Fort Road</string>
+    <string name="area_7">Hindalga</string>
+    <string name="area_8">Honaga</string>
+    <string name="area_9">Kangrali</string>
+    <string name="area_10">Khanapur</string>
+    <string name="area_11">Nehru Nagar</string>
+    <string name="area_12">Shahapur</string>
+    <string name="area_13">Tilakwadi</string>
+    <string name="area_14">Vadagaon</string>
 </resources>
