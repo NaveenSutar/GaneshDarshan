@@ -37,13 +37,13 @@ public class SplashActivity extends Activity {
     private void StartAnimations() {
         Animation anim = AnimationUtils.loadAnimation(this, R.anim.alpha);
         anim.reset();
-        LinearLayout l = (LinearLayout) findViewById(R.id.lin_lay);
+        LinearLayout l = findViewById(R.id.lin_lay);
         l.clearAnimation();
         l.startAnimation(anim);
 
         anim = AnimationUtils.loadAnimation(this, R.anim.translate);
         anim.reset();
-        ImageView iv = (ImageView) findViewById(R.id.logo);
+        ImageView iv = findViewById(R.id.logo);
         iv.clearAnimation();
         iv.startAnimation(anim);
 

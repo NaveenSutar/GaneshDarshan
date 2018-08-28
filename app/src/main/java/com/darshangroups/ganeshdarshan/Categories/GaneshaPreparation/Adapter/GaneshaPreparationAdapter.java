@@ -10,7 +10,6 @@ import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.darshangroups.ganeshdarshan.Categories.GaneshaPreparation.GaneshaPreparationActivity;
 import com.darshangroups.ganeshdarshan.Data.GaneshaData;
 import com.darshangroups.ganeshdarshan.R;
@@ -32,7 +31,7 @@ public class GaneshaPreparationAdapter extends RecyclerView.Adapter<GaneshaPrepa
         MyViewHolder(View view) {
             super(view);
 
-            cimg_path = (ImageView)itemView.findViewById(R.id.pgimg);
+            cimg_path = itemView.findViewById(R.id.pgimg);
             cshared_by = itemView.findViewById(R.id.pgsharedby);
             cplace_name = itemView.findViewById(R.id.pgplacename);
             cimg_caption = itemView.findViewById(R.id.pgcaption);
