@@ -6,15 +6,14 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.darshangroups.ganeshdarshan.R;
+import com.github.chrisbanes.photoview.PhotoView;
 import com.squareup.picasso.Picasso;
 
 public class HomeGaneshaImageFragment extends Fragment {
-    private ImageView imageView;
+    private PhotoView imageView;
     private TextView tvCshared_by, tvCplacename, tvCtitle;
 
     @Override

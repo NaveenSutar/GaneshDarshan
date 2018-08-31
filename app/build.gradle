@@ -19,7 +19,29 @@ android {
 }
 
 dependencies {
+    /*implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0-beta01'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+
+    //my additions
+    implementation 'com.android.support:cardview-v7:28.0.0-beta01'
+    implementation 'com.android.support:recyclerview-v7:28.0.0-beta01'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.android.support:design:28.0.0-beta01'
+    implementation 'com.airbnb.android:lottie:2.5.5'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
+    implementation 'com.android.volley:volley:1.0.0'
+    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    //Later Uses
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.github.chrisbanes:PhotoView:2.1.4'*/
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:28.0.0-beta01'
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
 
@@ -36,8 +58,9 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.5.2'
 
     //Later Uses
-    implementation 'com.github.florent37:materialleanback:1.0.2'
     implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.github.chrisbanes:PhotoView:2.1.4'
+    implementation 'net.gotev:uploadservice:3.2.3'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'

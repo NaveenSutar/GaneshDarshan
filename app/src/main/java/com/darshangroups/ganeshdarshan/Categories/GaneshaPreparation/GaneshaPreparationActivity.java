@@ -59,7 +59,7 @@ public class GaneshaPreparationActivity extends AppCompatActivity implements Gan
         /*
             //To show list in grid view
             recyclerView.setAdapter(mAdapter);
-            recyclerView.setLayoutManager(new GridLayoutManager(VadagaonActivity.this, 2));
+            recyclerView.setLayoutManager(new GridLayoutManager(GaneshaPreparationActivity.this, 2));
         */
 
         /*
