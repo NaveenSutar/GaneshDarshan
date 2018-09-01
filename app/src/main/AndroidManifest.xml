@@ -166,5 +166,6 @@
             android:theme="@style/AppThemeBar" />
         <activity android:name=".ImageUploadActivity" />
         <activity android:name=".Categories.UploadImage.UploadImageActivity" />
+        <activity android:name=".Categories.UploadImage.upload_test" />
     </application>
 </manifest>
