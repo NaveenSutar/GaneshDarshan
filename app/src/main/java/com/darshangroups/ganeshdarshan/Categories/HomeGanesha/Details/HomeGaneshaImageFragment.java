@@ -29,7 +29,7 @@ public class HomeGaneshaImageFragment extends Fragment {
         if (bundle != null) {
             String cimg_path = bundle.getString("cimg_path", null);
             String cshared_by = bundle.getString("cshared_by", null);
-            String cplace_name = bundle.getString("cplace_name", null);
+            String cplace_name = bundle.getString("caddress", null);
             String ctitle = bundle.getString("ctitle", null);
 
 

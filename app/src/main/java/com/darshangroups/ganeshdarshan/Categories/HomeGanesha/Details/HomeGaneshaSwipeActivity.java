@@ -45,7 +45,7 @@ public class HomeGaneshaSwipeActivity extends FragmentActivity {
             Bundle bundle = new Bundle();
             bundle.putString("cimg_path", data.getcimg_path());
             bundle.putString("cshared_by", data.getcshared_by());
-            bundle.putString("cplace_name", data.getcplace_name());
+            bundle.putString("caddress", data.getcaddress());
             bundle.putString("ctitle", data.getctitle());
 
             HomeGaneshaImageFragment imageFragment = new HomeGaneshaImageFragment();

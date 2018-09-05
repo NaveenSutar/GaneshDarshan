@@ -10,7 +10,6 @@ import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.darshangroups.ganeshdarshan.Data.GaneshaData;
 import com.darshangroups.ganeshdarshan.R;
 import com.squareup.picasso.Picasso;
@@ -64,7 +63,7 @@ public class HomeGaneshaAdapter extends RecyclerView.Adapter<HomeGaneshaAdapter.
     public void onBindViewHolder(MyViewHolder holder, final int position) {
         final GaneshaData data = dataFiltered.get(position);
         holder.cshared_by.setText(data.getcshared_by());
-        holder.cplace_name.setText(data.getcplace_name());
+        holder.cplace_name.setText(data.getcaddress());
         Picasso.with(context).load(data.cimg_path).placeholder(R.drawable.img_err).error(R.drawable.img_err).into(holder.img_path);
         //Glide.with(context).load(data.getcimg_path()).apply(RequestOptions.circleCropTransform()).into(holder.thumbnail);
     }

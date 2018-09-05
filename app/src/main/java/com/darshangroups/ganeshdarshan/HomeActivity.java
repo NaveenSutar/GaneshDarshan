@@ -9,7 +9,7 @@ import android.view.View;
 import com.darshangroups.ganeshdarshan.Categories.GaneshaPreparation.GaneshaPreparationActivity;
 import com.darshangroups.ganeshdarshan.Categories.HomeGanesha.HomeGaneshaActivity;
 import com.darshangroups.ganeshdarshan.Categories.SarvajanikGanapati.SarvajanikGanapatiActivity;
-import com.darshangroups.ganeshdarshan.Categories.UploadImage.upload_test;
+import com.darshangroups.ganeshdarshan.Categories.UploadImage.new_upload_for_android;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -52,7 +52,7 @@ public class HomeActivity extends AppCompatActivity {
         c4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent upload = new Intent(HomeActivity.this, upload_test.class);
+                Intent upload = new Intent(HomeActivity.this, new_upload_for_android.class);
                 startActivity(upload);
             }
         });

@@ -276,12 +276,12 @@ public class UploadImageActivity extends AppCompatActivity implements AdapterVie
                 HashMap<String, String> HashMapParams = new HashMap<String, String>();
 
                 HashMapParams.put(Uname, GetUname);
-                HashMapParams.put(Umoor, GetUmoor);
+                //HashMapParams.put(Umoor, GetUmoor);
                 HashMapParams.put(Uaddress, GetUaddress);
-                HashMapParams.put(Utitle, GetUtitle);
-                HashMapParams.put(Udesc, GetUdesc);
-                HashMapParams.put(Uarea, GetUarea);
-                HashMapParams.put(Ucategory, GetUcategory);
+                //HashMapParams.put(Utitle, GetUtitle);
+                //HashMapParams.put(Udesc, GetUdesc);
+                //HashMapParams.put(Uarea, GetUarea);
+                //HashMapParams.put(Ucategory, GetUcategory);
                 HashMapParams.put(Image, ConvertImage);
 
                 String FinalData = imageProcessClass.ImageHttpRequest("http://www.brainways.in/ganeshdarshan/upload/upload_mob.php", HashMapParams);
