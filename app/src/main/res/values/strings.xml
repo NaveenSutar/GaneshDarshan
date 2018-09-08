@@ -4,7 +4,7 @@
     <string name="title_activity_welcome">Home Screen</string>
     <string name="next">NEXT</string>
     <string name="skip">SKIP</string>
-    <string name="start">GET STARTED</string>
+    <string name="start">Done</string>
 
     <!--Slide 1-->
     <string name="slide_1_title">Right In Your Hand</string>

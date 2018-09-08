@@ -168,5 +168,6 @@
         <activity android:name=".Categories.UploadImage.UploadImageActivity" />
         <activity android:name=".Categories.UploadImage.upload_test" />-->
         <activity android:name=".Categories.UploadImage.new_upload_for_android" />
+        <activity android:name=".Categories.UploadImage.upload_webview" />
     </application>
 </manifest>

@@ -13,15 +13,6 @@
         android:layout_gravity="center"
         android:orientation="vertical">
 
-        <ProgressBar
-            android:id="@+id/myProgressBar"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:indeterminate="true"
-            android:indeterminateBehavior="cycle"
-            android:visibility="gone" />
-
         <ImageView
             android:layout_width="60dp"
             android:layout_height="60dp"
@@ -333,6 +324,15 @@
             android:text="Submit"
             android:textColor="@android:color/white"
             android:textStyle="bold"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/myProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateBehavior="cycle"
             android:visibility="gone" />
     </LinearLayout>
 </ScrollView>

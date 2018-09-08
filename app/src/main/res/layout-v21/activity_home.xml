@@ -67,7 +67,7 @@
                     android:layout_height="60dp"
                     android:contentDescription="@string/home_img_1"
                     android:padding="@dimen/uni_padding"
-                    android:src="@drawable/swastika" />
+                    android:src="@drawable/sarvajanik" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -111,7 +111,7 @@
                     android:layout_height="60dp"
                     android:contentDescription="@string/home_img_2"
                     android:padding="@dimen/uni_padding"
-                    android:src="@drawable/pray" />
+                    android:src="@drawable/home" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -153,7 +153,7 @@
                     android:layout_height="60dp"
                     android:contentDescription="@string/home_img_3"
                     android:padding="@dimen/uni_padding"
-                    android:src="@drawable/flags" />
+                    android:src="@drawable/preparation" />
 
                 <TextView
                     android:layout_width="match_parent"
