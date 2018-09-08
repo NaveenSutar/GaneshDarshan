@@ -33,7 +33,7 @@ public class ImageFragment extends Fragment {
             String ctitle = bundle.getString("ctitle", null);
 
             Picasso.with(getActivity()).load(cimg_path).placeholder(R.drawable.img_err_two).error(R.drawable.img_err_two).into(imageView);
-            tvCtitle.setText(ctitle);
+            //tvCtitle.setText(ctitle);
             tvCshared_by.setText("Shared By : " + cshared_by);
             tvCplacename.setText("Address : " + caddress);
         }

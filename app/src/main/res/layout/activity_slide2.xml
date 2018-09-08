@@ -19,16 +19,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingTop="15dp"
             android:text="@string/slide_2_title"
             android:textColor="#6b4500"
-            android:visibility="gone"
-            android:textSize="@dimen/slide_title"
-            android:textStyle="bold" />
+            android:textSize="@dimen/slide_title" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="30dp"
+            android:padding="15dp"
             android:text="@string/slide_2_desc"
             android:textAlignment="center"
             android:textColor="#6b4500"

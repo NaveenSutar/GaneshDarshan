@@ -9,13 +9,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.NetworkError;
+import com.android.volley.NoConnectionError;
+import com.android.volley.ParseError;
 import com.android.volley.Response;
+import com.android.volley.ServerError;
+import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.darshangroups.ganeshdarshan.Categories.HomeGanesha.Adapter.HomeGaneshaAdapter;
@@ -60,7 +66,6 @@ public class HomeGaneshaActivity extends AppCompatActivity implements HomeGanesh
         recyclerView = findViewById(R.id.home_ganesha_list);
 
         //swipeinfo = (TextView) findViewById(R.id.swipeinfo);
-
         /*
             //To show list in grid view
             recyclerView.setAdapter(mAdapter);
@@ -95,9 +100,14 @@ public class HomeGaneshaActivity extends AppCompatActivity implements HomeGanesh
         JsonArrayRequest request = new JsonArrayRequest(URL, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
-                if (response == null) {
-                    Toast.makeText(getApplicationContext(), "Couldn't fetch the data! Pleas try again.", Toast.LENGTH_LONG).show();
-                    return;
+
+                try {
+                    if (response == null) {
+                        Toast.makeText(getApplicationContext(), "Couldn't fetch the data! Pleas try again.", Toast.LENGTH_LONG).show();
+                        return;
+                    }
+                } catch (Exception e) {
+
                 }
 
                 mJsonResponse = response.toString();
@@ -119,10 +129,43 @@ public class HomeGaneshaActivity extends AppCompatActivity implements HomeGanesh
         }, new Response.ErrorListener() {
 
             @Override
-            public void onErrorResponse(VolleyError error) {
+            public void onErrorResponse(VolleyError volleyError) {
                 // error in getting json
-                Log.e(TAG, "Error: " + error.getMessage());
-                Toast.makeText(getApplicationContext(), "Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
+                /*Log.e(TAG, "Error: " + volleyError.getMessage());
+                Toast.makeText(getApplicationContext(), "Error: " + volleyError.getMessage(), Toast.LENGTH_SHORT).show();*/
+
+                if (volleyError instanceof NetworkError || volleyError instanceof ServerError || volleyError instanceof AuthFailureError || volleyError instanceof ParseError
+                        || volleyError instanceof NoConnectionError || volleyError instanceof TimeoutError) {
+                    //Toast.makeText(getApplicationContext(),"Cannot connect to Internet...Please check your connection!", Toast.LENGTH_LONG).show();
+
+                    /*
+
+                if (volleyError instanceof NetworkError) {
+                    //Toast.makeText(getApplicationContext(),"Cannot connect to Internet...Please check your connection!", Toast.LENGTH_LONG).show();
+                } else if (volleyError instanceof ServerError) {
+                    //Toast.makeText(getApplicationContext(),"The server could not be found. Please try again after some time!!", Toast.LENGTH_LONG).show();
+                } else if (volleyError instanceof AuthFailureError) {
+                    //Toast.makeText(getApplicationContext(),"Cannot connect to Internet...Please check your connection!", Toast.LENGTH_LONG).show();
+                } else if (volleyError instanceof ParseError) {
+                    //Toast.makeText(getApplicationContext(),"Parsing error! Please try again after some time!!", Toast.LENGTH_LONG).show();
+                } else if (volleyError instanceof NoConnectionError) {
+                    //Toast.makeText(getApplicationContext(),"Cannot connect to Internet...Please check your connection!", Toast.LENGTH_LONG).show();
+                } else if (volleyError instanceof TimeoutError) {
+                    //Toast.makeText(getApplicationContext(),"Connection TimeOut! Please check your internet connection.", Toast.LENGTH_LONG).show();
+                }
+                */
+
+                    setContentView(R.layout.activity_error);
+                    TextView textView = findViewById(R.id.try_again);
+
+                    textView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            finish();
+                            startActivity(getIntent());
+                        }
+                    });
+                }
             }
         });
         HomeGaneshaVollyInit.getInstance().addToRequestQueue(request);

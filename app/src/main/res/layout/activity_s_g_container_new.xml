@@ -31,7 +31,7 @@
                 <ImageView
                     android:id="@+id/pgimg"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="70dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/img_err_two"
                     tools:ignore="ContentDescription,RtlHardcoded" />

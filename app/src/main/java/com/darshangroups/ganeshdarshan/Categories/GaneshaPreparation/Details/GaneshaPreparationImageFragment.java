@@ -29,12 +29,12 @@ public class GaneshaPreparationImageFragment extends Fragment {
         if (bundle != null) {
             String cimg_path = bundle.getString("cimg_path", null);
             String cshared_by = bundle.getString("cshared_by", null);
-            String cplace_name = bundle.getString("cplace_name", null);
+            String cplace_name = bundle.getString("caddress", null);
             String ctitle = bundle.getString("ctitle", null);
 
 
             Picasso.with(getActivity()).load(cimg_path).placeholder(R.drawable.img_err_two).error(R.drawable.img_err_two).into(imageView);
-            tvCtitle.setText(ctitle);
+            //tvCtitle.setText(ctitle);
             tvCshared_by.setText("Shared By : " + cshared_by);
             tvCplacename.setText("From : " + cplace_name);
         }

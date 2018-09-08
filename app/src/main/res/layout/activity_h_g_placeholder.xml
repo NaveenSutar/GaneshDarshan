@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content">
@@ -23,8 +22,8 @@
         android:padding="3dp">
 
         <View
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_margin="5dp"
             android:background="@color/placeholder_bg" />
 
@@ -46,7 +45,7 @@
             <View
                 android:id="@+id/hgsharedby"
                 android:layout_width="100dp"
-                android:layout_height="16dp"
+                android:layout_height="17dp"
                 android:layout_marginTop="3dp"
                 android:background="@color/placeholder_bg"
                 tools:ignore="HardcodedText,RtlHardcoded" />
@@ -54,7 +53,7 @@
             <View
                 android:id="@+id/hgplacename"
                 android:layout_width="60dp"
-                android:layout_height="13dp"
+                android:layout_height="14dp"
                 android:layout_marginTop="2dp"
                 android:background="@color/placeholder_bg"
                 tools:ignore="HardcodedText,RtlHardcoded" />
@@ -67,5 +66,5 @@
         android:layout_below="@id/ll1"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="@color/placeholder_bg"/>
+        android:background="@color/placeholder_bg" />
 </RelativeLayout>

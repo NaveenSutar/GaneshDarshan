@@ -46,7 +46,7 @@ public class AreaAdapter extends RecyclerView.Adapter<AreaAdapter.MyViewHolder> 
         holder.cimg_caption.setText(data.getcimg_caption());*/
         //Glide.with(context).load(data.cimg_path).placeholder(R.drawable.img_err_two).error(R.drawable.img_err_two).into(holder.cimg_path);
 
-        Picasso.with(context).load(data.cimg_path).placeholder(R.drawable.img_err_two).error(R.drawable.img_err_two).into(holder.cimg_path);
+        Picasso.with(context).load(data.cimg_path).fit().noFade().centerCrop().placeholder(R.drawable.img_err_two).error(R.drawable.img_err_two).into(holder.cimg_path);
 
         //Glide.with(context).load(data.getcimg_path()).apply(RequestOptions.circleCropTransform()).into(holder.thumbnail);
     }

@@ -34,7 +34,7 @@ public class HomeGaneshaImageFragment extends Fragment {
 
 
             Picasso.with(getActivity()).load(cimg_path).placeholder(R.drawable.img_err).error(R.drawable.img_err).into(imageView);
-            tvCtitle.setText(ctitle);
+            //tvCtitle.setText(ctitle);
             tvCshared_by.setText("Shared By : " + cshared_by);
             tvCplacename.setText("From : " + cplace_name);
         }

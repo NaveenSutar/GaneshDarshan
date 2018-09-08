@@ -164,10 +164,19 @@
             android:name=".Categories.SarvajanikGanapati.SarvajanikGanapatiActivity"
             android:label="Sarvajanik Ganapati"
             android:theme="@style/AppThemeBar" />
+
         <!--<activity android:name=".ImageUploadActivity" />
+
         <activity android:name=".Categories.UploadImage.UploadImageActivity" />
-        <activity android:name=".Categories.UploadImage.upload_test" />-->
-        <activity android:name=".Categories.UploadImage.new_upload_for_android" />
-        <activity android:name=".Categories.UploadImage.upload_webview" />
+
+        <activity android:name=".Categories.UploadImage.upload_test" />
+
+        <activity android:name=".Categories.UploadImage.new_upload_for_android" />-->
+
+        <activity
+            android:name=".Categories.UploadImage.upload_webview"
+            android:label="Upload Image"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeBar" />
     </application>
 </manifest>

@@ -65,7 +65,7 @@ public class GaneshaPreparationAdapter extends RecyclerView.Adapter<GaneshaPrepa
     public void onBindViewHolder(MyViewHolder holder, final int position) {
         final GaneshaData data = dataFiltered.get(position);
         holder.cshared_by.setText(data.getcshared_by());
-        holder.cplace_name.setText(data.getcplace_name());
+        holder.cplace_name.setText(data.getcaddress());
         holder.cimg_caption.setText(data.getcimg_caption());
         //Glide.with(context).load(data.cimg_path).placeholder(R.drawable.img_err_two).error(R.drawable.img_err_two).into(holder.cimg_path);
 

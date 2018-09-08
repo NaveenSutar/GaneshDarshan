@@ -119,6 +119,7 @@ public class upload_webview /*extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload_webview);
+
         webView = findViewById(R.id.webView);
         progressBar = findViewById(R.id.myProgressBar);
         webSettings = webView.getSettings();
